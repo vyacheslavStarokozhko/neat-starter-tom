@@ -11,3 +11,5 @@ items:
     url: /
   - text: About
     url: /about
+  - text: My Story
+    url: /my-story
