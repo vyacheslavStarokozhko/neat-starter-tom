@@ -8,3 +8,7 @@ items:
     url: "#"
   - text: Blog
     url: "/blog"
+  - text: Home
+    url: "/"
+  - text: About
+    url: "about"
