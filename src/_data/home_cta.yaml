@@ -1,0 +1,4 @@
+home_cta: 'Title'
+ctas:
+  - label: 'Label'
+    url: '#'

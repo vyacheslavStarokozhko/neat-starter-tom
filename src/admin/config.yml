@@ -66,3 +66,16 @@ collections:
           - { label: Title, name: text, widget: string }
           - { label: Caption, name: caption, widget: markdown }
           - { label: Image, name: image, widget: image }
+      - label: "CTA"
+        name: "home_cta"
+        file: "src/_data/home_cta.yaml"
+        fields:
+          - {label: Title, name: label_cta, widget: string}
+          - label: CTA Links
+            name: ctas
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Url, name: url, widget: string }
