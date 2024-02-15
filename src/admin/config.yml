@@ -59,7 +59,7 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Hero"
+      - label: "Hedsadsdasro"
         name: "home_hero"
         file: "src/_data/home_hero.yaml"
         fields:
