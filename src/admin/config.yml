@@ -29,24 +29,12 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: [ "Tags", "created", "from", "config.yml" ]
   - label: "Settings"
     name: "settings"
     editor:
       preview: false
     files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.yaml"
-        fields:
-          - label: Nav Items
-            name: items
-            widget: list
-            allow_add: false
-            collapsed: false
-            fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
@@ -54,12 +42,33 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+  - label: "Footer"
+    name: "global_footer"
+    editor:
+      preview: false
+    files:
+      - label: "Footer"
+        name: "footer"
+        file: "src/_data/footer.yaml"
+        fields:
+          - { label: Logo, name: footer_logo, widget: image }
+          - { label: Caption, name: footer_caption, widget: string }
+  - label: "Header"
+    name: "global_header"
+    editor:
+      preview: false
+    files:
+      - label: "Header"
+        name: "header"
+        file: "src/_data/header.yaml"
+        fields:
+          - { label: Logo, name: header_logo, widget: image }
   - label: 'Home'
     name: home
     editor:
       preview: false
     files:
-      - label: "Hedsasddsaadro"
+      - label: "Hero"
         name: "home_hero"
         file: "src/_data/home_hero.yaml"
         fields:
@@ -70,7 +79,7 @@ collections:
         name: "home_cta"
         file: "src/_data/home_cta.yaml"
         fields:
-          - {label: Title, name: label_cta, widget: string}
+          - { label: Title, name: label_cta, widget: string }
           - label: CTA Links
             name: ctas
             widget: list
@@ -79,3 +88,78 @@ collections:
             fields:
               - { label: Label, name: label, widget: string }
               - { label: Url, name: url, widget: string }
+      - label: "Form"
+        name: "home_form"
+        file: "src/_data/home_form.yaml"
+        fields:
+          - { label: Form Title, name: form_title, widget: string }
+          - { label: Form Description, name: form_description, widget: markdown }
+          - { label: Form Logo, name: form_logo, widget: image }
+          - { label: Form Url, name: form_url, widget: string }
+          - label: Form Links
+            name: form_links
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Url, name: url, widget: string }
+              - { label: Logo, name: form_link_logo, widget: image }
+      - label: "Bottom Banner"
+        name: "home_bottom_banner"
+        file: "src/_data/home_bottom_banner.yaml"
+        fields:
+          - { label: Title, name: home_bottom_title, widget: string }
+  - label: 'Navigation'
+    name: "navigayion"
+    editor:
+      preview: false
+    files:
+      - label: "Footer"
+        name: "footer_navigation"
+        file: "src/_data/footer_navigation.yaml"
+        fields:
+          - label: Footer Links
+            name: footer_links
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Url, name: url, widget: string }
+      - label: "Header"
+        name: "header_navigation"
+        file: "src/_data/header_navigation.yaml"
+        fields:
+          - label: Header Links
+            name: header_links
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Url, name: url, widget: string }
+              - label: Second Links
+                name: second_links
+                widget: list
+                allow_add: true
+                collapsed: false
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Url, name: url, widget: string }
+                  - label: Third Links
+                    name: third_links
+                    widget: list
+                    allow_add: true
+                    collapsed: false
+                    fields:
+                      - { label: Label, name: label, widget: string }
+                      - { label: Url, name: url, widget: string }
+                      - label: Fourth Links
+                        name: fourth_links
+                        widget: list
+                        allow_add: true
+                        collapsed: false
+                        fields:
+                          - { label: Label, name: label, widget: string }
+                          - { label: Url, name: url, widget: string }
