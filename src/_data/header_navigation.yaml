@@ -1,0 +1,54 @@
+header_links:
+  - label: About Me
+    url: "#"
+    second_links:
+      - label: My Story
+        url: /my-story/
+      - label: My Book
+        url: /you-are-the-logo/
+      - label: Media and Guest Appearances
+        url: /media-guest/
+  - label: Work With Me
+    url: "#"
+    second_links:
+      - label: Executive Coach
+        url: /executive-coach/
+      - label: Thought Partner
+        url: /thought-partner/
+      - label: Meeting Facilitator
+        url: /meeting-facilitator/
+      - label: Advisory Board Services
+        url: /advisory-board-service-offerings/
+      - label: Keynote Speaker
+        url: /speaking/
+  - label: Advisory Boards
+    url: "#"
+    second_links:
+      - label: Advisory Board Services
+        url: /advisory-board-service-offerings/
+      - label: Advisory Board Formation
+        url: /advisory-board-formation/
+      - label: Advisory Board Chair
+        url: /advisory-board-chair/
+      - label: Advisory Board Member
+        url: /advisory-board-member/
+      - label: Advisory Board of One
+        url: /advisory-board-of-one/
+      - label: Advisory Board {INSIDER} Podcast
+        url: /advisory-board-insider-podcast/
+  - label: Learn
+    url: "#"
+    second_links:
+      - label: Training Videos
+        url: /watch/
+      - label: Podcasts
+        url: /listen/
+        third_links:
+          - label: Advisory Board {INSIDER} Podcast
+            url: /advisory-board-insider-podcast/
+          - label: The Shred Coach Podcast
+            url: /the-shred-coach-podcast/
+      - label: Articles
+        url: /read/
+  - label: Contact Me
+    url: /contact-tom/
