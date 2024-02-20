@@ -1,9 +1,12 @@
 {
+  "body": "#fefefe",
   "primary": "#383542",
-  "info": "#E6AF2E",
+  "containerColor": "#233651",
   "success": "#0F8B8D",
-  "warning": "#D33E43",
   "danger": "#FF220C",
-  "link": "#3D348B",
-  "body": "#fefefe"
+  "info": "#E6AF2E",
+  "socialsBackground": "#ffc914",
+  "link": "#ffc914",
+  "warning": "#e4572e",
+  "socialsColor": "#233651"
 }
