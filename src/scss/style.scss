@@ -1,0 +1,25 @@
+@import "vars";
+
+.container{
+	margin: 0 auto;
+	max-width: var(--container-width) !important;
+	padding: 0 16px;
+	display: flex;
+
+}
+
+.navbar{
+	background-color: var(--blue);
+
+}
+
+
+.navbar .container .logo-container{
+	width: 20%;
+}
+.navbar .container .social-container{
+	width: 17%;
+}
+.navbar .container .menu-container{
+	width: 63%;
+}

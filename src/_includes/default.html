@@ -10,12 +10,32 @@
     {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+
+
+
+      :root{
+        --blue:#233651;
+        --container-width:1064px;
+        /*--icon-color:{{site_identity.socials.color}};*/
+        /*--icon-color:{{site_identity.socials.color}};*/
+        /*--icon-background:{{site_identity.socials.background}};*/
+      }
+
+
+
+
+
+    </style>
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
+
   </head>
+
   <body>
     {% include "./partials/navbar.html" %}
 

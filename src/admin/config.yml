@@ -12,6 +12,50 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - label: "Site Settings"
+    name: "site_settings"
+    editor:
+      preview: false
+    files:
+      - label: "Site Identity"
+        name: "site_identity"
+        file: "src/_data/site_identity.yaml"
+        fields:
+          - label: Socials
+            name: socials
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Url, name: url, widget: string }
+              - { label: Icon, name: icon, widget: string }
+  - label: "Styles"
+    name: "styles"
+    editor:
+      preview: false
+    files:
+      - label: "Styles"
+        name: "styles"
+        file: "src/_data/styles.json"
+        fields:
+          - { label: Body, name: body, widget: color , required: false }
+          - { label: Primary, name: primary, widget: color , required: false }
+          - { label: Secondary, name: Secondary, widget: color , required: false }
+          - { label: Accent, name: accent, widget: color , required: false }
+          - { label: Success, name: success, widget: color , required: false }
+          - { label: Warning, name: warning, widget: color , required: false }
+          - { label: Danger, name: danger, widget: color , required: false }
+          - { label: Link, name: link, widget: color , required: false }
+          - { label: Link Hover, name: linkHover, widget: color , required: false }
+          - { label: Text, name: text, widget: color , required: false }
+          - { label: h1, name: h1, widget: color , required: false }
+          - { label: h2, name: h2, widget: color , required: false }
+          - { label: h3, name: h3, widget: color , required: false }
+          - { label: h4, name: h4, widget: color , required: false }
+          - { label: h5, name: h5, widget: color , required: false }
+          - { label: h6, name: h6, widget: color , required: false }
+          - { label: Socials Background, name: socialsBackground, widget: color , required: false }
+          - { label: SocialsColor, name: socialsColor, widget: color , required: false }
   - label: "Blog"
     name: "blog"
     folder: "src/posts"
@@ -52,7 +96,7 @@ collections:
         file: "src/_data/footer.yaml"
         fields:
           - { label: Logo, name: footer_logo, widget: image }
-          - { label: Caption, name: footer_caption, widget: string }
+          - { label: Caption, name: footer_caption,description: '@year will be replaced by the current year', widget: string }
   - label: "Header"
     name: "global_header"
     editor:
@@ -109,7 +153,7 @@ collections:
         name: "home_bottom_banner"
         file: "src/_data/home_bottom_banner.yaml"
         fields:
-          - { label: Title, name: home_bottom_title, widget: string }
+          - { label: Caption, name: home_bottom_caption, widget: markdown }
   - label: 'Navigation'
     name: "navigayion"
     editor:
