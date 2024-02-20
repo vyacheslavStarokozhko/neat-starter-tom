@@ -9,8 +9,46 @@
 	&.jc-sb{
 		justify-content: space-between;
 	}
+	&.fdc{
+		flex-direction: column;
+	}
 }
 
 .hero{
 	background-color: $containerColor;
+}
+
+
+.button-list{
+	display: flex;
+	gap: 10px;
+	li{
+		a{
+
+
+		}
+	}
+}
+
+form.form{
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	P{
+		color: $black;
+	}
+	input{
+
+	}
+}
+
+
+.gallery-list{
+	display: flex;
+	gap: 60px;
+	.gallery-item{
+		h3{
+			margin-bottom: 15px;
+		}
+	}
 }

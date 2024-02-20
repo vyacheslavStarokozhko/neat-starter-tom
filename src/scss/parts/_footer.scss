@@ -1,0 +1,25 @@
+footer{
+	padding: 20px;
+	background-color: $black;
+	.footer-column{
+		text-align: center;
+		width: 33%;
+		img{
+			width: 120px;
+		}
+		p{
+			font-size: 12px;
+		}
+	}
+	ul{
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+		li{
+			a{
+				color: $white;
+				font-size: 17px;
+			}
+		}
+	}
+}

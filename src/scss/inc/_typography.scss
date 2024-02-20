@@ -4,3 +4,33 @@ a,button,i{
 a{
 	color: $link;
 }
+button,.button{
+	font-size: 16px;
+	padding: 12px 24px;
+	background-color: $buttonBackground;
+	color:$buttonText;
+	border: 1px solid #0bb2af;
+	line-height: 18px;
+	border-radius: 5px;
+	display: inline-block;
+	&:hover{
+	    color: $buttonHoverText;
+		background-color: $buttonHoverBackground;
+	}
+}
+p{
+	color: $text;
+}
+
+
+input[type="submit"]{
+	font-size: 16px;
+	padding: 12px 24px;
+	color: $buttonHoverText;
+	background-color: $buttonHoverBackground;
+	line-height: 18px;
+	border-radius: 5px;
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+}

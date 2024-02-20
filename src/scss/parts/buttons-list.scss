@@ -1,0 +1,12 @@
+.cta{
+	padding: 24px;
+	background-color: $black;
+	&__title{
+		h2{
+			color: $white;
+		}
+	}
+	.button-list{
+		margin-top: 20px;
+	}
+}

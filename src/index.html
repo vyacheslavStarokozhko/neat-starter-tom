@@ -17,3 +17,54 @@ path: home
     </div>
   </div>
 </div>
+<div class="cta">
+  <div class="container fdc">
+    <div class="cta__title">
+      <h2>{{home_cta.label_cta}}</h2>
+    </div>
+    {% if home_cta.ctas %}
+    <ul class="button-list">
+      {% for link in home_cta.ctas %}
+      <li class="button-item">
+        <a href="{{ link.url }}" class="button">{{ link.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>
+<div class="form-wrapper">
+  <div class="container jc-sb">
+    {% if home_form.form_links %}
+    <ul class="form-wrapper__list gallery-list">
+      {% for link in home_form.form_links %}
+      <li class="gallery-item">
+        <h3>{{link.label}}</h3>
+        <a href="{{ link.url }}">
+          <img src="{{link.form_link_logo}}" alt="Image">
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <form name="update" data-netlify="true" method="POST" class="form-wrapper__form form">
+      <input type="hidden" name="subject"
+             value="New Quote Request"/>
+      <h3>{{home_form.form_title}}</h3>
+      <p>{{home_form.form_description}}</p>
+      <input type="text" placeholder="First Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="submit" value="Subscribe">
+      <a href="{{home_form.form_url}}">
+        <img src="{{home_form.form_logo}}" alt="Form Logo">
+      </a>
+    </form>
+  </div>
+</div>
+<div class="bottom-banner">
+  <div class="container">
+    <div class="bottom-banner__text">
+      {{home_bottom_banner.home_bottom_caption}}
+    </div>
+  </div>
+</div>
