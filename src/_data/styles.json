@@ -1,4 +1,5 @@
 {
+  "buttonBackground": "#17bebb",
   "body": "#fefefe",
   "primary": "#383542",
   "containerColor": "#233651",
@@ -6,7 +7,10 @@
   "danger": "#FF220C",
   "info": "#E6AF2E",
   "socialsBackground": "#ffc914",
+  "buttonHoverText": "#ffffff",
+  "buttonHoverBackground": "#e4572e",
   "link": "#ffc914",
   "warning": "#e4572e",
-  "socialsColor": "#233651"
+  "socialsColor": "#233651",
+  "buttonText": "#000000"
 }
