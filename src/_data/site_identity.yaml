@@ -1,11 +1,11 @@
 socials:
   - url: https://www.youtube.com/@TomAdamsCoach
-    icon: /static/img/icon.svg
+    icon: fab fa-youtube
   - url: https://www.linkedin.com/in/tomadamscoach/
-    icon: /static/img/icon.svg
+    icon: fab fa-linkedin
   - url: https://twitter.com/TomAdams
-    icon: /static/img/icon.svg
+    icon: fab fa-tumblr-square
   - url: https://www.facebook.com/tomadamscoach/
-    icon: /static/img/icon.svg
+    icon: fab fa-facebook-square
 background: "#ffc914"
 color: "#233651"
