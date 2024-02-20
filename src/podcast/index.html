@@ -1,0 +1,29 @@
+---
+layout: podcast
+pagination:
+    data: collections.podcast
+    size: 12
+---
+
+<section class="mt-15">
+  {% set postslist = collections.podcast %}
+
+  {% for post in pagination.items %}
+ <article>
+     <a href="{{ post.url | url }}">
+         <img src="{{post.data.thumbnail}}" alt="thumbnail">
+     </a>
+     <h2>
+         <a href="{{ post.url | url }}">
+            {{post.data.title}}
+         </a>
+     </h2>
+     <p>
+         {{post.data.date}}
+     </p>
+     <a href="{{ post.url | url }}">
+         Listen Now
+     </a>
+ </article>
+  {% endfor %}
+</section>

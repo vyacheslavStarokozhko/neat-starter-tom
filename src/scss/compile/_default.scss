@@ -36,9 +36,29 @@ form.form{
 	flex-direction: column;
 	P{
 		color: $black;
+		margin-bottom: 16px;
+		label{
+			display: none;
+		}
+	}
+	input,button{
+width: 100%;
 	}
 	input{
-
+		background: #F6F8FA;
+		color: $black;
+		font-size: 15px;
+		padding: 12px;
+		border: 1px solid #243454;
+		border-radius: 5px;
+		line-height: 1.4;
+		margin: 0;
+		transition: border-color ease-out 300ms;
+	}
+	a{
+		display: block;
+		margin-top: 16px;
+		text-align: center;
 	}
 }
 

@@ -10,7 +10,7 @@ path: home
       <h1>
         {{home_hero.text}}
       </h1>
-      {{home_hero.caption}}
+      <p>{{home_hero.caption}}</p>
     </div>
     <div class="hero__image">
       <img src="{{home_hero.image}}" alt="Tom">
@@ -54,11 +54,11 @@ path: home
       <p>{{home_form.form_description}}</p>
       <p>
         <label>Name</label>
-        <input type="text" name="name" required/>
+        <input type="text" name="name" required placeholder="First Name"/>
       </p>
       <p>
         <label>Email</label>
-        <input type="email" name="email" required/>
+        <input type="email" name="email" required placeholder="Email Address"/>
       </p>
       <p>
         <button type="submit">Send</button>

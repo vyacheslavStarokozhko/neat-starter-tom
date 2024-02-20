@@ -39,14 +39,20 @@ function cssTask() {
         .pipe(sourcemaps.write("."))
         .pipe(dest("./_site/static/css/"));
 }
-
+function jsTask(){
+    return src('./src/static/js/*.js',{sourcemaps: true})
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write("."))
+        .pipe(dest("./_site/static/js/"));
+}
 function watchFiles() {
     watch("./src/scss/**/*.scss", parallel(cssTask));
     watch("./src/_data/styles.json", parallel(jsonColorCss));
     watch("./src/_data/sizing.json", parallel(jsonSizingCss));
     watch("./src/_data/typography.json", parallel(jsonTypographyCss));
+    watch("./src/static/js/*.js",parallel(jsTask));
 }
 
-exports.build = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, cssTask);
+exports.build = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, jsTask, cssTask);
 
-exports.default = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, parallel(cssTask, watchFiles));
+exports.default = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, parallel(cssTask,jsTask, watchFiles));

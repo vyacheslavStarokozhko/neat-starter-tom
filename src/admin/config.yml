@@ -79,7 +79,22 @@ collections:
           - { label: h4, name: h4, widget: number , required: false }
           - { label: h5, name: h5, widget: number , required: false }
           - { label: h6, name: h6, widget: number , required: false }
-  - label: "Blog"
+  - label: "Podcasts"
+    name: "podcasts"
+    folder: "src/podcasts"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Video", name: "video", widget: "string"}
+      - { label: "Audio", name: "audio", widget: "file"}
+
+  - label: "Articles"
     name: "blog"
     folder: "src/posts"
     create: true
