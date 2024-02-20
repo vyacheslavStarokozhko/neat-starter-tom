@@ -4,10 +4,16 @@ title: Neat Starter
 path: home
 ---
 
-<div class="container">
-  <h1>
-    {{home_hero.text}}
-  </h1>
-  {{home_hero.caption}}
-  <img src="{{home_hero.image}}" alt="Tom">
+<div class="hero">
+  <div class="container align-center">
+    <div class="hero__description">
+      <h1>
+        {{home_hero.text}}
+      </h1>
+      {{home_hero.caption}}
+    </div>
+    <div class="hero__image">
+      <img src="{{home_hero.image}}" alt="Tom">
+    </div>
+  </div>
 </div>

@@ -1,0 +1,16 @@
+.container{
+	margin: 0 auto;
+	max-width: px($globalWidth) !important;
+	padding: 0 px($containerPadding);
+	display: flex;
+	&.align-center{
+		align-items: center;
+	}
+	&.jc-sb{
+		justify-content: space-between;
+	}
+}
+
+.hero{
+	background-color: $containerColor;
+}

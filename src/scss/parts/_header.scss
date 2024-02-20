@@ -1,0 +1,46 @@
+
+.navbar{
+padding: 20px 0px;
+	background-color: $containerColor;
+	&.sticky{
+		position: sticky;
+		top: 0;
+		left: 0;
+	}
+	.logo-container{
+		width: 20%;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	.social-container{
+		width: 17%;
+		ul{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			li{
+				a{
+					display: block;
+					i{
+						font-size: 25px;
+					}
+					&:hover{
+					    i{
+						    opacity: 0.75;
+					    }
+					}
+				}
+			}
+		}
+	}
+	.menu-container{
+		width: 63%;
+		ul{
+			display: none;
+		}
+	}
+}
+

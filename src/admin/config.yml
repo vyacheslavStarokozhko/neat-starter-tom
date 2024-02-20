@@ -35,10 +35,11 @@ collections:
       preview: false
     files:
       - label: "Styles"
-        name: "styles"
+        name: "color_styles"
         file: "src/_data/styles.json"
         fields:
           - { label: Body, name: body, widget: color , required: false }
+          - { label: Container Background, name: containerColor, widget: color , required: false }
           - { label: Primary, name: primary, widget: color , required: false }
           - { label: Secondary, name: Secondary, widget: color , required: false }
           - { label: Accent, name: accent, widget: color , required: false }
@@ -47,6 +48,10 @@ collections:
           - { label: Danger, name: danger, widget: color , required: false }
           - { label: Link, name: link, widget: color , required: false }
           - { label: Link Hover, name: linkHover, widget: color , required: false }
+          - { label: Button Text, name: buttonText, widget: color , required: false }
+          - { label: Button Background, name: buttonBackground, widget: color , required: false }
+          - { label: Button Hover Text, name: buttonHoverText, widget: color , required: false }
+          - { label: Button Hover Background, name: buttonHoverBackground, widget: color , required: false }
           - { label: Text, name: text, widget: color , required: false }
           - { label: h1, name: h1, widget: color , required: false }
           - { label: h2, name: h2, widget: color , required: false }
@@ -56,6 +61,24 @@ collections:
           - { label: h6, name: h6, widget: color , required: false }
           - { label: Socials Background, name: socialsBackground, widget: color , required: false }
           - { label: SocialsColor, name: socialsColor, widget: color , required: false }
+      - label: "Sizing"
+        name: "sizing_styles"
+        file: "src/_data/sizing.json"
+        fields:
+          - { label: Container Width, name: globalWidth, widget: number }
+          - { label: Container padding, name: containerPadding, widget: number }
+      - label: "Typography"
+        name: "typography_styles"
+        file: "src/_data/typography.json"
+        fields:
+          - { label: Link, name: link, widget: number , required: false }
+          - { label: Text, name: text, widget: number , required: false }
+          - { label: h1, name: h1, widget: number , required: false }
+          - { label: h2, name: h2, widget: number , required: false }
+          - { label: h3, name: h3, widget: number , required: false }
+          - { label: h4, name: h4, widget: number , required: false }
+          - { label: h5, name: h5, widget: number , required: false }
+          - { label: h6, name: h6, widget: number , required: false }
   - label: "Blog"
     name: "blog"
     folder: "src/posts"

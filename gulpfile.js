@@ -6,10 +6,26 @@ const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
 const jsonToSass = require("gulp-json-data-to-sass");
 
-function jsonCss() {
+function jsonColorCss() {
     return src("./src/_data/styles.json").pipe(
         jsonToSass({
-            sass: "./src/scss/_vars.scss",
+            sass: "./src/scss/vars/_color.scss",
+            separator: "",
+        })
+    );
+}
+function jsonSizingCss() {
+    return src("./src/_data/sizing.json").pipe(
+        jsonToSass({
+            sass: "./src/scss/vars/_sizing.scss",
+            separator: "",
+        })
+    );
+}
+function jsonTypographyCss() {
+    return src("./src/_data/typography.json").pipe(
+        jsonToSass({
+            sass: "./src/scss/vars/_typography.scss",
             separator: "",
         })
     );
@@ -25,10 +41,12 @@ function cssTask() {
 }
 
 function watchFiles() {
-    watch("./src/scss/*.scss", parallel(cssTask));
-    watch("./src/_data/styles.json", parallel(jsonCss));
+    watch("./src/scss/**/*.scss", parallel(cssTask));
+    watch("./src/_data/styles.json", parallel(jsonColorCss));
+    watch("./src/_data/sizing.json", parallel(jsonSizingCss));
+    watch("./src/_data/typography.json", parallel(jsonTypographyCss));
 }
 
-exports.build = series(jsonCss, cssTask);
+exports.build = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, cssTask);
 
-exports.default = series(jsonCss, parallel(cssTask, watchFiles));
+exports.default = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, parallel(cssTask, watchFiles));
