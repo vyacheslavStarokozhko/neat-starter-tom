@@ -1,5 +1,6 @@
 ---
 title: Thought Partner
+permalink: /thought-partner/
 date: 2024-02-21T14:28:58.142Z
 thumbnail: /static/img/ta-167r-transparent.webp
 caption: >-
