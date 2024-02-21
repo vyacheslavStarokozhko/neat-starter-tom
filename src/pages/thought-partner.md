@@ -4,7 +4,7 @@ permalink: /thought/
 date: 2024-02-21T14:28:58.142Z
 thumbnail: /static/img/ta-167r-transparent.webp
 caption: >-
-  # Real World Challenges? Lets have thoughtful conversations about them.
+  ## Real World Challenges? Lets have thoughtful conversations about them.
 
 
   A **thought partnership** with me is the regular practice of sharing ideas and experiences to help you navigate the complexity you face in your life and business.
