@@ -10,8 +10,6 @@ caption: >-
   A **thought partnership** with me is the regular practice of sharing ideas and experiences to help you navigate the complexity you face in your life and business.
 
 
-
-
   #### f﻿refrefre
 description: |-
   # Facilitation That Delivers Results
