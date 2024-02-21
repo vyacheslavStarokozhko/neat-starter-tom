@@ -8,6 +8,13 @@
         $('#footer-caption').text(text);
 
 
+
+
+
+
+
+
+
     })
 })(jQuery);
 

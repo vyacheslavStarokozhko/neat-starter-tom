@@ -3,6 +3,7 @@
 }
 
 .articles-container{
+	margin-top: 50px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
@@ -60,6 +61,18 @@
 			padding: 5px 10px;
 			margin: 0 0 5px;
 			color: #1e73be;
+			&[href=""]{
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}
+
+
+		&[aria-current="page"]{
+			a{
+				background: #f5f5f5;
+				pointer-events: none;
+			}
 		}
 	}
 }

@@ -1,0 +1,42 @@
+---
+layout: default
+prism: true
+---
+
+
+<div class="hero">
+    <div class="container align-center">
+        <div class="hero__description">
+            <h1>
+                {{home_hero.text}}
+            </h1>
+            {{caption}}
+        </div>
+        <div class="hero__image">
+            <img src="{{thumbnail}}" alt="Tom">
+        </div>
+    </div>
+</div>
+<div class="cta">
+    <div class="container fdc">
+        <div class="cta__title">
+            <h2>{{home_cta.label_cta}}</h2>
+        </div>
+        {% if home_cta.ctas %}
+        <ul class="button-list">
+            {% for link in home_cta.ctas %}
+            <li class="button-item">
+                <a href="{{ link.url }}" class="button">{{ link.label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>
+<div class="bottom-banner">
+    <div class="container">
+        <div class="bottom-banner__text">
+            {{home_bottom_banner.home_bottom_caption}}
+        </div>
+    </div>
+</div>

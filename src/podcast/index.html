@@ -3,6 +3,8 @@ layout: podcast
 pagination:
     data: collections.podcast
     size: 12
+    reverse: true
+    alias: podcast
 ---
 
 
@@ -35,7 +37,7 @@ pagination:
 
 
     <ul class="pagination">
-        <li class="previous">
+        <li class="previous nav">
             <a href="{{pagination.href.previous}}">Previous</a>
         </li>
         {% for pag in pagination.pages %}
@@ -44,7 +46,7 @@ pagination:
             {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}
         ><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
         {% endfor %}
-        <li class="next">
+        <li class="next nav">
             <a href="{{pagination.href.next}}">Next</a>
         </li>
     </ul>

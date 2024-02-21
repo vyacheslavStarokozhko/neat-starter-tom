@@ -79,6 +79,21 @@ collections:
           - { label: h4, name: h4, widget: number , required: false }
           - { label: h5, name: h5, widget: number , required: false }
           - { label: h6, name: h6, widget: number , required: false }
+  - label: "Pages"
+    name: "pages"
+    folder: "src/pages"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {label: "Title", name: "title", widget: string}
+      - {label: "Permalink", name: "permalink", widget: string}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Caption", name: "caption", widget: "markdown" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Bottom", name: "bottom", widget: "markdown" }
   - label: "Podcasts"
     name: "podcasts"
     folder: "src/podcasts"
