@@ -4,10 +4,12 @@ footer{
 	.footer-column{
 		text-align: center;
 		width: 33%;
+
 		img{
 			width: 120px;
 		}
 		p{
+			margin-bottom: 0;
 			font-size: 12px;
 			color: $white;
 			text-align: start;
