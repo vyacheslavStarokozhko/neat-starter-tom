@@ -1,8 +1,9 @@
 ---
+author: dadsd
+icon: /static/img/name-banner-inverted.png
 thumbnail: /static/img/thumb_1697117700-artwork.jpg
 title: Frontline Hiring Tactics with Fletcher Wimbush
 description: Episode 46
-author: dadsd
 date: 2024-02-20T16:50:53.778Z
 video: https://www.youtube.com/watch?v=SlRr_pEToak
 audio: /static/img/file_example_mp3_1mg.mp3
