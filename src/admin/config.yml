@@ -130,11 +130,12 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: "Icon", name: "icon", widget: "image" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "podcast_body", widget: "markdown" }
       - { label: "Video", name: "video", widget: "string"}
       - { label: "Audio", name: "audio", widget: "file"}
 
@@ -149,7 +150,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "post_body", widget: "markdown" }
       - widget: select
         label: "tags"
         name: "tags"
@@ -285,3 +286,20 @@ collections:
                         fields:
                           - { label: Label, name: label, widget: string }
                           - { label: Url, name: url, widget: string }
+  - label: 'Templates'
+    name: "templates"
+    editor:
+      preview: false
+    files:
+      - label: "Music Share"
+        name: "music_share"
+        file: "src/_data/music_share.yaml"
+        fields:
+          - label: Share Links
+            name: share_links
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Icon, name: icon, widget: image }
+              - { label: Url, name: url, widget: string }

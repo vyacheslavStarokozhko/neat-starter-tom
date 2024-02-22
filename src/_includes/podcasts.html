@@ -3,19 +3,56 @@ layout: default
 prism: true
 ---
 
-<div class="container max-w-4xl mt-6  px-6">
-    <div class="pb-5 mb-5 border-b border-gray-100">
-        <h1 class="font-bold text-5xl">{{title}}</h1>
-        <p class="text-center text-base leading-6 font-medium text-gray-500">
-            <time> {{ date | readableDate }}
-                   by
-                <a>{{ author }}</a>
-
-            </time>
-        </p>
-
+<main class="podcast">
+    {% if icon %}
+    <div class="container podcast-logo"><img src="{{icon}}" alt="Logo"></div>
+    {% endif %}
+    <div class="podcast-hero">
+        <div class="container">
+            <div class="podcast-hero__title">
+                {{title}}
+            </div>
+            <div class="podcast-hero__description">
+                <span>{{description}}</span>
+            </div>
+        </div>
     </div>
-    <article class="prose lg:prose-xl my-4 mx-auto">
-        {{ content | safe }}</article>
-
-</div>
+    <div class="podcast-subtitle">
+        <div class="container">
+            <div class="podcast-subtitle__date">
+                <strong>{{date | readableDate}}</strong>
+            </div>
+            <div class="podcast-subtitle__back">
+                <a href="/podcast/">Back to All Episodes</a>
+            </div>
+        </div>
+    </div>
+    <div class="podcast-content">
+        <div class="container">
+            <div class="podcast-content podcast-main">
+                {% if video %}
+                <video src="{{video}}"></video>
+                {% endif %}
+                {% if audio %}
+                <div class="podcast-audio">
+                    <div>
+                        {% if thumbnail %}
+                        <img src="{{thumbnail}}" alt="alt">
+                        {% endif %}
+                    </div>
+                    <div>
+                        <audio controls src="{{audio}}"></audio>
+                    </div>
+                </div>
+                {% endif %}
+                {% if podcast_body %} 
+                    {{podcast_body}}
+                {% endif %}
+            </div>
+            <div class="podcast-form">
+                {% include "./partials/forms/subscribe_today.html" %}
+            </div>
+        </div>
+    </div>
+    {% include "./partials/nusic_share.html" %}
+</main>
