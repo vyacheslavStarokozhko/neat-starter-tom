@@ -1,10 +1,12 @@
-const { watch, src, dest, parallel, series } = require("gulp");
+const {watch, src, dest, parallel, series} = require("gulp");
 const sass = require("gulp-dart-sass");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
 const jsonToSass = require("gulp-json-data-to-sass");
+var concat = require('gulp-concat');
+
 // const markdown = require("gulp-markdown");
 
 function jsonColorCss() {
@@ -15,6 +17,7 @@ function jsonColorCss() {
         })
     );
 }
+
 function jsonSizingCss() {
     return src("./src/_data/sizing.json").pipe(
         jsonToSass({
@@ -23,13 +26,19 @@ function jsonSizingCss() {
         })
     );
 }
+
 function jsonTypographyCss() {
-    return src("./src/_data/typography.json").pipe(
-        jsonToSass({
-            sass: "./src/scss/vars/_typography.scss",
-            separator: "",
-        })
-    );
+    return src("./src/_data/typography.json")
+        .pipe(
+            jsonToSass({
+                sass: "./src/scss/vars/_typography.scss",
+                prefix: '',
+                suffix: '',
+                separator: ''
+            })
+        )
+
+
 }
 
 
@@ -41,16 +50,17 @@ function jsonTypographyCss() {
 
 
 function cssTask() {
-    return src("./src/scss/*.scss", { allowEmpty: true })
+    return src("./src/scss/*.scss", {allowEmpty: true})
         .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: "compressed" }))
+        .pipe(sass({outputStyle: "compressed"}))
         .on("error", sass.logError)
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(sourcemaps.write("."))
         .pipe(dest("./_site/static/css/"));
 }
-function jsTask(){
-    return src('./src/static/js/*.js',{sourcemaps: true})
+
+function jsTask() {
+    return src('./src/static/js/*.js', {sourcemaps: true})
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write("."))
         .pipe(dest("./_site/static/js/"));
@@ -62,9 +72,9 @@ function watchFiles() {
     watch("./src/_data/styles.json", parallel(jsonColorCss));
     watch("./src/_data/sizing.json", parallel(jsonSizingCss));
     watch("./src/_data/typography.json", parallel(jsonTypographyCss));
-    watch("./src/static/js/*.js",parallel(jsTask));
+    watch("./src/static/js/*.js", parallel(jsTask));
 }
 
-exports.build = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, jsTask, cssTask);
+exports.build = series(jsonColorCss, jsonSizingCss, jsonTypographyCss, jsTask, cssTask);
 
-exports.default = series(jsonColorCss,jsonSizingCss,jsonTypographyCss, parallel(cssTask,jsTask, watchFiles));
+exports.default = series(jsonColorCss, jsonSizingCss, jsonTypographyCss, parallel(cssTask, jsTask, watchFiles));

@@ -15,6 +15,7 @@
 	}
 	&-content{
 		padding-top: 30px;
+		padding-bottom: 30px;
 		.container{
 			gap: 40px;
 		}
@@ -30,6 +31,7 @@
 		text-align: center;
 	}
 	&-audio{
+		margin-top: 50px;
 		border: 1px solid $black;
 		border-radius: 5px;
 		padding: 10px;

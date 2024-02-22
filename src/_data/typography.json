@@ -1,56 +1,56 @@
 {
   "body": {
-    "body_font": "\"Helvetica\",Verdana,Arial,sans-serif",
-    "body_weight": 400,
-    "body_size": 17,
-    "body_height": "1.5"
+    "_font": "\"Helvetica\",Verdana,Arial,sans-serif",
+    "_weight": 400,
+    "_size": 17,
+    "_height": "1.5"
   },
   "h1": {
-    "h1_height": "1.2",
-    "h1_weight": 700,
-    "h1_size": 36,
-    "h1_font": "\"Georgia\",Times,serif"
+    "_height": "1.2",
+    "_weight": 700,
+    "_size": 36,
+    "_font": "\"Georgia\",Times,serif"
   },
   "h2": {
-    "h2_height": "1.2",
-    "h2_weight": 701,
-    "h2_size": 29,
-    "h2_font": "\"Georgia\",Times,serif"
+    "_height": "1.2",
+    "_weight": 701,
+    "_size": 29,
+    "_font": "\"Georgia\",Times,serif"
   },
   "h3": {
-    "h3_height": "1.2",
-    "h3_weight": 700,
-    "h3_size": 24,
-    "h3_font": "\"Georgia\",Times,serif"
+    "_height": "1.2",
+    "_weight": 700,
+    "_size": 24,
+    "_font": "\"Georgia\",Times,serif"
   },
   "h4": {
-    "h4_height": "1.2",
-    "h4_weight": 700,
-    "h4_size": 18,
-    "h4_font": "\"Georgia\",Times,serif"
+    "_height": "1.2",
+    "_weight": 700,
+    "_size": 18,
+    "_font": "\"Georgia\",Times,serif"
   },
   "h5": {
-    "h5_height": "1.2",
-    "h5_weight": 700,
-    "h5_size": 14,
-    "h5_font": "\"Georgia\",Times,serif"
+    "_height": "1.2",
+    "_weight": 700,
+    "_size": 14,
+    "_font": "\"Georgia\",Times,serif"
   },
   "text": {
-    "text_weight": 400,
-    "text_size": 16,
-    "text_height": "1.2",
-    "text_font": "\"Helvetica\",Verdana,Arial,sans-serif"
+    "_weight": 400,
+    "_size": 16,
+    "_height": "1.2",
+    "_font": "\"Helvetica\",Verdana,Arial,sans-serif"
   },
   "h6": {
-    "h6_height": "1.2",
-    "h6_weight": 700,
-    "h6_size": 12,
-    "h6_font": "\"Georgia\",Times,serif"
+    "_height": "1.2",
+    "_weight": 700,
+    "_size": 12,
+    "_font": "\"Georgia\",Times,serif"
   },
   "link": {
-    "link_weight": 400,
-    "link_size": 16,
-    "link_height": "1.2",
-    "link_font": "\"Helvetica\",Verdana,Arial,sans-serif"
+    "_weight": 400,
+    "_size": 16,
+    "_height": "1.2",
+    "_font": "\"Helvetica\",Verdana,Arial,sans-serif"
   }
 }

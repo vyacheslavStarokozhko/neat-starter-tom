@@ -1,8 +1,14 @@
 a,button,i{
 	transition: 0.3s;
 }
+
 a{
 	color: $link;
+	font-family: $link_font;
+	font-size: $link_size;
+	font-weight: $link_weight;
+	line-height: $link_height;
+
 }
 button,.button,
 .page-cta>ul li a{
@@ -22,6 +28,11 @@ button,.button,
 p{
 	color: $text;
 	margin-bottom: 16px;
+
+	font-family: $text_font;
+	font-size: $text_size;
+	font-weight: $text_weight;
+	line-height: $text_height;
 }
 
 
@@ -35,4 +46,48 @@ input[type="submit"],button[type="submit"]{
 	display: inline-block;
 	cursor: pointer;
 	border: none;
+}
+
+
+body{
+	font-family: $body_font;
+	font-size: $body_size;
+	font-weight: $body_weight;
+	line-height: $body_height;
+}
+h1{
+	font-family: $h1_font;
+	font-size: $h1_size;
+	font-weight: $h1_weight;
+	line-height: $h1_height;
+}
+h2{
+	font-family: $h2_font;
+	font-size: $h2_size;
+	font-weight: $h2_weight;
+	line-height: $h2_height;
+}
+h3{
+	font-family: $h3_font;
+	font-size: $h3_size;
+	font-weight: $h3_weight;
+	line-height: $h3_height;
+}
+h4{
+	font-family: $h4_font;
+	font-size: $h4_size;
+	font-weight: $h4_weight;
+	line-height: $h4_height;
+}
+h5{
+	font-family: $h5_font;
+	font-size: $h5_size;
+	font-weight: $h5_weight;
+	line-height: $h5_height;
+}
+h6{
+	font-family: $h6_font;
+	font-size: $h6_size;
+	font-weight: $h6_weight;
+	line-height: $h6_height;
 }

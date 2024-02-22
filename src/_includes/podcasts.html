@@ -26,9 +26,7 @@ prism: true
         <div class="container">
             <div class="podcast-main">
                 <strong class="date">{{date | readableDate}}</strong>
-                {% if video %}
-                <video src="{{video}}" muted autoplay></video>
-                {% endif %}
+
                 {% if audio %}
                 <div class="podcast-audio">
                     <div>

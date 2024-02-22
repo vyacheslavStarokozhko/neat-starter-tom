@@ -71,14 +71,78 @@ collections:
         name: "typography_styles"
         file: "src/_data/typography.json"
         fields:
-          - { label: Link, name: link, widget: number , required: false }
-          - { label: Text, name: text, widget: number , required: false }
-          - { label: h1, name: h1, widget: number , required: false }
-          - { label: h2, name: h2, widget: number , required: false }
-          - { label: h3, name: h3, widget: number , required: false }
-          - { label: h4, name: h4, widget: number , required: false }
-          - { label: h5, name: h5, widget: number , required: false }
-          - { label: h6, name: h6, widget: number , required: false }
+          - label: "Body"
+            name: "body"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "size", widget: number }
+              - { label: "Font Family",name: "font", widget: string }
+              - { label: "Font Weight",name: "weight", widget: number }
+              - { label: "Line Height",name: "height", widget: string }
+          - label: "Text"
+            name: "text"
+            widget: "object"
+            fields:
+              - {label: "Font Size",name: "_size", widget: number}
+              - {label: "Font Family",name: "_font", widget: string}
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - {label: "Line Height",name: "_height", widget: string}
+          - label: "Link"
+            name: "link"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
+          - label: "h1"
+            name: "h1"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
+          - label: "h2"
+            name: "h2"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
+          - label: "h3"
+            name: "h3"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
+          - label: "h4"
+            name: "h4"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
+          - label: "h5"
+            name: "h5"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
+          - label: "h6"
+            name: "h6"
+            widget: "object"
+            fields:
+              - { label: "Font Size",name: "_size", widget: number }
+              - { label: "Font Family",name: "_font", widget: string }
+              - {label: "Font Weight",name: "_weight", widget: number}
+              - { label: "Line Height",name: "_height", widget: string }
   - label: "Forms"
     name: "forms"
     editor:
@@ -136,7 +200,6 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "podcast_body", widget: "markdown" }
-      - { label: "Video", name: "video", widget: "string"}
       - { label: "Audio", name: "audio", widget: "file"}
 
   - label: "Articles"

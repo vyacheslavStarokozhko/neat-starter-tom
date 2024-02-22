@@ -24,6 +24,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.2",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.1.0",
     "gulp-json-data-to-sass": "^1.0.1",
     "gulp-markdown": "^8.0.0",
