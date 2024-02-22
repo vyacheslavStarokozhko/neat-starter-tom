@@ -5,33 +5,29 @@ prism: true
 
 <main class="podcast">
     {% if icon %}
-    <div class="container podcast-logo"><img src="{{icon}}" alt="Logo"></div>
+    <div class="podcast-logo">
+        <div class="container  jc-c">
+            <img src="{{icon}}" alt="Logo">
+        </div>
+    </div>
     {% endif %}
     <div class="podcast-hero">
-        <div class="container">
+        <div class="container jc-sb align-center">
             <div class="podcast-hero__title">
-                {{title}}
+                <h1>{{title}}</h1>
             </div>
             <div class="podcast-hero__description">
-                <span>{{description}}</span>
+                <h4>{{description}}</h4>
             </div>
         </div>
     </div>
-    <div class="podcast-subtitle">
-        <div class="container">
-            <div class="podcast-subtitle__date">
-                <strong>{{date | readableDate}}</strong>
-            </div>
-            <div class="podcast-subtitle__back">
-                <a href="/podcast/">Back to All Episodes</a>
-            </div>
-        </div>
-    </div>
+
     <div class="podcast-content">
         <div class="container">
-            <div class="podcast-content podcast-main">
+            <div class="podcast-main">
+                <strong class="date">{{date | readableDate}}</strong>
                 {% if video %}
-                <video src="{{video}}"></video>
+                <video src="{{video}}" muted autoplay></video>
                 {% endif %}
                 {% if audio %}
                 <div class="podcast-audio">
@@ -40,16 +36,24 @@ prism: true
                         <img src="{{thumbnail}}" alt="alt">
                         {% endif %}
                     </div>
-                    <div>
+                    <div class="audio">
+                        <h3>{{title}}</h3>
                         <audio controls src="{{audio}}"></audio>
                     </div>
                 </div>
                 {% endif %}
-                {% if podcast_body %} 
-                    {{podcast_body}}
+                {% if podcast_body %}
+                <div class="podcast-body">
+                    <div class="markdown">
+                        {{podcast_body | text}}
+                    </div>
+                </div>
                 {% endif %}
+
+
             </div>
             <div class="podcast-form">
+                <a href="/podcast/" class="button">Back to All Episodes</a>
                 {% include "./partials/forms/subscribe_today.html" %}
             </div>
         </div>
