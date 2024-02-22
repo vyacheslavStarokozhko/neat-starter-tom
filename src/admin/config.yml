@@ -79,6 +79,35 @@ collections:
           - { label: h4, name: h4, widget: number , required: false }
           - { label: h5, name: h5, widget: number , required: false }
           - { label: h6, name: h6, widget: number , required: false }
+  - label: "Forms"
+    name: "forms"
+    editor:
+      preview: false
+    files:
+      - label: "Quick Update"
+        name: "quick_update"
+        file: "src/_data/quick_update.yaml"
+        fields:
+          - {label: "caption", name: "caption", widget: "markdown",required: false }
+          - { label: Form Logo, name: form_logo, widget: image }
+          - { label: Form Url, name: form_url, widget: string }
+      - label: "Contact Us"
+        name: "contact_us"
+        file: "src/_data/contact_us.yaml"
+        fields:
+          - { label: "caption", name: "caption", widget: "markdown",required: false }
+      - label: "Subscribe Today"
+        name: "subscribe_today"
+        file: "src/_data/subscribe_today.yaml"
+        fields:
+          - { label: "Caption", name: "caption", widget: "markdown",required: false }
+          - { label: "Sub Caption",name: "sub_caption", widget: "string", required: false }
+      - label: "Subscribe Advisory"
+        name: "subscribe_advisory"
+        file: "src/_data/subscribe_advisory.yaml"
+        fields:
+          - { label: "Caption", name: "caption", widget: "markdown",required: false }
+          - { label: "Sub Caption",name: "sub_caption", widget: "string", required: false }
   - label: "Pages"
     name: "pages"
     folder: "src/pages"
@@ -189,10 +218,6 @@ collections:
         name: "home_form"
         file: "src/_data/home_form.yaml"
         fields:
-          - { label: Form Title, name: form_title, widget: string }
-          - { label: Form Description, name: form_description, widget: markdown }
-          - { label: Form Logo, name: form_logo, widget: image }
-          - { label: Form Url, name: form_url, widget: string }
           - label: Form Links
             name: form_links
             widget: list

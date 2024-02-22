@@ -5,6 +5,7 @@ const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
 const jsonToSass = require("gulp-json-data-to-sass");
+// const markdown = require("gulp-markdown");
 
 function jsonColorCss() {
     return src("./src/_data/styles.json").pipe(
@@ -30,6 +31,15 @@ function jsonTypographyCss() {
         })
     );
 }
+
+
+// function markdown() {
+//     return src("./src/**/*md")
+//         .pipe(markdown())
+//         .pipe(dest('dist'))
+// }
+
+
 function cssTask() {
     return src("./src/scss/*.scss", { allowEmpty: true })
         .pipe(sourcemaps.init())
@@ -45,6 +55,8 @@ function jsTask(){
         .pipe(sourcemaps.write("."))
         .pipe(dest("./_site/static/js/"));
 }
+
+
 function watchFiles() {
     watch("./src/scss/**/*.scss", parallel(cssTask));
     watch("./src/_data/styles.json", parallel(jsonColorCss));

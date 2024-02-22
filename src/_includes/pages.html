@@ -10,7 +10,9 @@ prism: true
             <h1>
                 {{home_hero.text}}
             </h1>
-            {{caption}}
+            <div class="markdown">
+                {{caption | text}}
+            </div>
         </div>
         <div class="hero__image">
             <img src="{{thumbnail}}" alt="Tom">
@@ -34,7 +36,7 @@ prism: true
     </div>
 </div>
 <div class="bottom-banner">
-    <div class="container">
+    <div class="container jc-c">
         <div class="bottom-banner__text">
             {{home_bottom_banner.home_bottom_caption}}
         </div>

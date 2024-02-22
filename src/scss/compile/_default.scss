@@ -12,6 +12,9 @@
 	&.fdc{
 		flex-direction: column;
 	}
+	&.jc-c{
+		justify-content: center;
+	}
 }
 
 .hero{
@@ -22,6 +25,8 @@
 .button-list{
 	display: flex;
 	gap: 10px;
+	justify-content: center;
+	align-items: center;
 	li{
 		a{
 

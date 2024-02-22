@@ -26,11 +26,11 @@
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.1.0",
     "gulp-json-data-to-sass": "^1.0.1",
+    "gulp-markdown": "^8.0.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "json-to-scss": "^1.6.2",
     "markdown-it": "^14.0.0",
-    "markdown-it-attrs": "^4.1.6",
     "postcss": "^8.4.5",
     "sass": "^1.71.0"
   }

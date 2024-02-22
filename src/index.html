@@ -10,7 +10,10 @@ path: home
       <h1>
         {{home_hero.text}}
       </h1>
-      <p>{{home_hero.caption}}</p>
+      <div class="markdown">
+          {{home_hero.caption | text}}
+      </div>
+      
     </div>
     <div class="hero__image">
       <img src="{{home_hero.image}}" alt="Tom">
@@ -34,7 +37,7 @@ path: home
   </div>
 </div>
 <div class="form-wrapper">
-  <div class="container jc-sb">
+  <div class="container jc-sb align-center">
     {% if home_form.form_links %}
     <ul class="form-wrapper__list gallery-list">
       {% for link in home_form.form_links %}
@@ -47,32 +50,16 @@ path: home
       {% endfor %}
     </ul>
     {% endif %}
-    <form name="update" data-netlify="true" method="POST" class="form-wrapper__form form">
-      <input type="hidden" name="subject"
-             value="New Quote Request"/>
-      <h3>{{home_form.form_title}}</h3>
-      <p>{{home_form.form_description}}</p>
-      <p>
-        <label>Name</label>
-        <input type="text" name="name" required placeholder="First Name"/>
-      </p>
-      <p>
-        <label>Email</label>
-        <input type="email" name="email" required placeholder="Email Address"/>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-      <a href="{{home_form.form_url}}">
-        <img src="{{home_form.form_logo}}" alt="Form Logo">
-      </a>
-    </form>
+    {% include "./_includes/partials/forms/quick_update.html" %}
   </div>
 </div>
 <div class="bottom-banner">
-  <div class="container">
+  <div class="container jc-c">
     <div class="bottom-banner__text">
-      {{home_bottom_banner.home_bottom_caption}}
+      <div class="markdown">
+          {{home_bottom_banner.home_bottom_caption | text}}
+      </div>
+      
     </div>
   </div>
 </div>
