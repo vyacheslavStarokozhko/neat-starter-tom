@@ -121,7 +121,7 @@ collections:
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Caption", name: "caption", widget: "markdown" }
       - { label: "Description", name: "description", widget: "markdown" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "page_body", widget: "markdown" }
       - { label: "Bottom", name: "bottom", widget: "markdown" }
   - label: "Podcasts"
     name: "podcasts"

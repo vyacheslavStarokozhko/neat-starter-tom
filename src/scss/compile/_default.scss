@@ -19,10 +19,19 @@
 
 .hero{
 	background-color: $containerColor;
+	&__description{
+		text-align: center;
+		p{
+			color: $white;
+		}
+		a{
+			color: $link;
+		}
+	}
 }
 
 
-.button-list{
+.button-list,.page-cta>ul{
 	display: flex;
 	gap: 10px;
 	justify-content: center;
@@ -39,6 +48,7 @@ form.form{
 	width: 33%;
 	display: flex;
 	flex-direction: column;
+	text-align: center;
 	P{
 		color: $black;
 		margin-bottom: 16px;
@@ -75,5 +85,14 @@ width: 100%;
 		h3{
 			margin-bottom: 15px;
 		}
+	}
+}
+
+
+.main-content{
+	padding: 20px;
+	margin: 20px;
+	ul{
+		list-style: inside;
 	}
 }

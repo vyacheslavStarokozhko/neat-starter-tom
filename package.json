@@ -31,6 +31,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "json-to-scss": "^1.6.2",
     "markdown-it": "^14.0.0",
+    "markdown-it-attrs": "^4.1.6",
+    "outdent": "^0.8.0",
     "postcss": "^8.4.5",
     "sass": "^1.71.0"
   }

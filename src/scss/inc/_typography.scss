@@ -4,7 +4,8 @@ a,button,i{
 a{
 	color: $link;
 }
-button,.button{
+button,.button,
+.page-cta>ul li a{
 	font-size: 16px;
 	padding: 12px 24px;
 	background-color: $buttonBackground;
@@ -20,6 +21,7 @@ button,.button{
 }
 p{
 	color: $text;
+	margin-bottom: 16px;
 }
 
 
