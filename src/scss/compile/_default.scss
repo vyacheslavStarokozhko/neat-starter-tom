@@ -46,9 +46,11 @@
 		}
 	}
 }
-
-form.form{
+.sidebar{
 	width: 33%;
+}
+form.form{
+
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -80,7 +82,6 @@ width: 100%;
 	}
 	&.subscribe-form{
 		width: 100%;
-		margin-top: 20px;
 		padding: 40px;
 		background-color: #fcfcfc;
 		border-radius: 4px;
