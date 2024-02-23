@@ -1,3 +1,10 @@
 {
-
+  "button_font": "\"Helvetica\",Verdana,Arial,sans-serif",
+  "button_size": 16,
+  "button_weight": 400,
+  "button_height": "1.2",
+  "button": "#000000",
+  "buttonHover": "#ff0000",
+  "background": "#dadada",
+  "backgroundHover": "#ffffff"
 }
