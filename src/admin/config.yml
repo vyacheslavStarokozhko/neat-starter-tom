@@ -17,18 +17,6 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Site Identity"
-        name: "site_identity"
-        file: "src/_data/site_identity.yaml"
-        fields:
-          - label: Socials
-            name: socials
-            widget: list
-            allow_add: true
-            collapsed: false
-            fields:
-              - { label: Url, name: url, widget: string }
-              - { label: Icon, name: icon, widget: string }
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
@@ -255,6 +243,14 @@ collections:
         file: "src/_data/header.yaml"
         fields:
           - { label: Logo, name: header_logo, widget: image }
+          - label: Socials
+            name: socials
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Url, name: url, widget: string }
+              - { label: Icon, name: icon, widget: string }
           - label: Header Links
             name: header_links
             widget: list
