@@ -1,3 +1,7 @@
 {
-
+  "h3_font": "\"Georgia\",Times,serif",
+  "h3_weight": 400,
+  "h3_height": "1.4",
+  "h3_color": "#0a0a0a",
+  "h3_size": 28
 }
