@@ -8,9 +8,9 @@
                 <img src="{{footer.footer_logo}}" alt="logo">
             </a>
         </div>
-        {% if footer_navigation.footer_links %}
+        {% if footer.footer_links %}
         <ul class="footer-column footer-menu">
-            {% for link in footer_navigation.footer_links %}
+            {% for link in footer.footer_links %}
             <li class="link-item">
                 <a href="{{ link.url }}">{{ link.label }}</a>
             </li>

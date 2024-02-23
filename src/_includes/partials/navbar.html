@@ -20,9 +20,9 @@
                 {% endif %}
             </div>
             <div class="menu-container">
-                {% if header_navigation.header_links %}
+                {% if header.header_links %}
                 <ul class='main-menu'>
-                    {% for link in header_navigation.header_links %}
+                    {% for link in header.header_links %}
                     <li class="menu-item first-item">
                         <a href="{{ link.url }}">
                             <span class="text">

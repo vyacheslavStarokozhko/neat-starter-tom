@@ -19,7 +19,7 @@ collections:
     files:
       - label: "Site Identity"
         name: "site_identity"
-        file: "src/_data/settings/site_identity.yaml"
+        file: "src/_data/site_identity.yaml"
         fields:
           - label: Socials
             name: socials
@@ -31,7 +31,7 @@ collections:
               - { label: Icon, name: icon, widget: string }
       - label: "Meta Settings"
         name: "settings"
-        file: "src/_data/settings/settings.yaml"
+        file: "src/_data/settings.yaml"
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
@@ -162,25 +162,25 @@ collections:
     files:
       - label: "Quick Update"
         name: "quick_update"
-        file: "src/_data/forms/quick_update.yaml"
+        file: "src/_data/quick_update.yaml"
         fields:
           - {label: "caption", name: "caption", widget: "markdown",required: false }
           - { label: Form Logo, name: form_logo, widget: image }
           - { label: Form Url, name: form_url, widget: string }
       - label: "Contact Us"
         name: "contact_us"
-        file: "src/_data/forms/contact_us.yaml"
+        file: "src/_data/contact_us.yaml"
         fields:
           - { label: "caption", name: "caption", widget: "markdown",required: false }
       - label: "Subscribe Today"
         name: "subscribe_today"
-        file: "src/_data/forms/subscribe_today.yaml"
+        file: "src/_data/subscribe_today.yaml"
         fields:
           - { label: "Caption", name: "caption", widget: "markdown",required: false }
           - { label: "Sub Caption",name: "sub_caption", widget: "string", required: false }
       - label: "Subscribe Advisory"
         name: "subscribe_advisory"
-        file: "src/_data/forms/subscribe_advisory.yaml"
+        file: "src/_data/subscribe_advisory.yaml"
         fields:
           - { label: "Caption", name: "caption", widget: "markdown",required: false }
           - { label: "Sub Caption",name: "sub_caption", widget: "string", required: false }
@@ -240,7 +240,7 @@ collections:
     files:
       - label: "Header"
         name: "header"
-        file: "src/_data/global/header.yaml"
+        file: "src/_data/header.yaml"
         fields:
           - { label: Logo, name: header_logo, widget: image }
           - label: Header Links
@@ -277,7 +277,7 @@ collections:
                           - { label: Url, name: url, widget: string }
       - label: "Footer"
         name: "footer"
-        file: "src/_data/global/footer.yaml"
+        file: "src/_data/footer.yaml"
         fields:
           - { label: Logo, name: footer_logo, widget: image }
           - { label: Caption, name: footer_caption,description: '@year will be replaced by the current year', widget: string }
@@ -296,14 +296,14 @@ collections:
     files:
       - label: "Hero"
         name: "home_hero"
-        file: "src/_data/pages/home/home_hero.yaml"
+        file: "src/_data/home_hero.yaml"
         fields:
           - { label: Title, name: text, widget: string }
           - { label: Caption, name: caption, widget: markdown }
           - { label: Image, name: image, widget: image }
       - label: "CTA"
         name: "home_cta"
-        file: "src/_data/pages/home/home_cta.yaml"
+        file: "src/_data/home_cta.yaml"
         fields:
           - { label: Title, name: label_cta, widget: string }
           - label: CTA Links
@@ -316,7 +316,7 @@ collections:
               - { label: Url, name: url, widget: string }
       - label: "Form"
         name: "home_form"
-        file: "src/_data/pages/home/home_form.yaml"
+        file: "src/_data/home_form.yaml"
         fields:
           - label: Form Links
             name: form_links
@@ -329,7 +329,7 @@ collections:
               - { label: Logo, name: form_link_logo, widget: image }
       - label: "Bottom Banner"
         name: "home_bottom_banner"
-        file: "src/_data/pages/home/home_bottom_banner.yaml"
+        file: "src/_data/home_bottom_banner.yaml"
         fields:
           - { label: Caption, name: home_bottom_caption, widget: markdown }
   - label: 'Templates'
@@ -339,7 +339,7 @@ collections:
     files:
       - label: "Music Share"
         name: "music_share"
-        file: "src/_data/parts/music_share.yaml"
+        file: "src/_data/music_share.yaml"
         fields:
           - label: Share Links
             name: share_links
