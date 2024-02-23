@@ -191,14 +191,20 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Title", name: "title", widget: string}
-      - {label: "Permalink", name: "permalink", widget: string}
+      - { label: "Title", name: "title", widget: string}
+      - { label: "Permalink", name: "permalink", widget: string}
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Caption", name: "caption", widget: "markdown" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Body", name: "page_body", widget: "markdown" }
       - { label: "Bottom", name: "bottom", widget: "markdown" }
+      - label: Tags
+        name: page_tag
+        widget: select
+        multiple: true
+        create: true
+        options: [ "Tag 1", "Tag 2" ]
   - label: "Podcasts"
     name: "podcasts"
     folder: "src/podcasts"
@@ -213,6 +219,12 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "podcast_body", widget: "markdown" }
       - { label: "Audio", name: "audio", widget: "file"}
+      - label: Category
+        name: podcast_category
+        widget: select
+        multiple: true
+        create: true
+        options: [ "Category 1", "Category 2" ]
 
   - label: "Articles"
     name: "blog"
