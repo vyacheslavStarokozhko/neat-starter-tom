@@ -1,3 +1,4 @@
+header_logo: /static/img/tom-logo-2023.webp
 header_links:
   - label: About Me
     url: "#"
