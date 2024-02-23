@@ -1,3 +1,7 @@
 {
-
+  "h6_size": 16,
+  "h6_color": "#0a0a0a",
+  "h6_weight": 400,
+  "h6_height": "1.4",
+  "h6_font": "\"Georgia\",Times,serif"
 }
