@@ -1,4 +1,13 @@
 header_logo: /static/img/tom-logo-2023.webp
+socials:
+  - url: https://www.youtube.com/@TomAdamsCoach
+    icon: fab fa-youtube
+  - url: https://www.linkedin.com/in/tomadamscoach/
+    icon: fab fa-linkedin
+  - url: https://twitter.com/TomAdams
+    icon: fab fa-tumblr-square
+  - icon: fab fa-facebook-square
+    url: https://www.facebook.com/tomadamscoach/
 header_links:
   - label: About Me
     url: "#"
