@@ -1,3 +1,7 @@
 {
-
+  "h1_size": 36,
+  "h1_font": "\"Georgia\",Times,serif",
+  "h1_weight": 400,
+  "h1_height": "1.4",
+  "h1_color": "#0a0a0a"
 }
