@@ -74,87 +74,87 @@ collections:
         name: "body_text"
         file: "src/_data/styling/typography/body.json"
         fields:
-          - { label: "Font Size",name: "body_size", widget: number }
-          - { label: "Font Family",name: "body_font", widget: string }
-          - { label: "Font Weight",name: "body_weight", widget: number }
-          - { label: "Line Height",name: "body_height", widget: string }
-          - { label: Body, name: body, widget: color , required: false }
+          - { label: "Font Size",name: "body_size", widget: number, required: true, default: 16}
+          - { label: "Font Family",name: "body_font", widget: string, required: true, default: "Open Sans,sans-serif"}
+          - { label: "Font Weight",name: "body_weight", widget: number, required: true, default: 400}
+          - { label: "Line Height",name: "body_height", widget: string, required: true, default: "1.2"}
+          - { label: Body, name: body, widget: color , required: true, default: "#000"}
       - label: "Link"
         name: "link"
         file: "src/_data/styling/typography/link.json"
         fields:
-          - { label: "Font Size",name: "link_size", widget: number }
-          - { label: "Font Family",name: "link_font", widget: string }
-          - { label: "Font Weight",name: "link_weight", widget: number }
-          - { label: "Line Height",name: "link_height", widget: string }
-          - { label: Link, name: link, widget: color , required: false }
-          - { label: Link Hover, name: linkHover, widget: color , required: false }
+          - { label: "Font Size",name: "link_size", widget: number , required: true, default: 16 }
+          - { label: "Font Family",name: "link_font", widget: string , required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "link_weight", widget: number , required: true, default: 400 }
+          - { label: "Line Height",name: "link_height", widget: string , required: true, default: "1.2" }
+          - { label: Link, name: link, widget: color , required: true , default: "#000" }
+          - { label: Link Hover, name: linkHover, widget: color , required: true, default: "#000" }
       - label: "Button"
         name: "button"
         file: "src/_data/styling/typography/button.json"
         fields:
-          - { label: "Font Size",name: "button_size", widget: number }
-          - { label: "Font Family",name: "button_font", widget: string }
-          - { label: "Font Weight",name: "button_weight", widget: number }
-          - { label: "Line Height",name: "button_height", widget: string }
-          - { label: Button, name: button, widget: color , required: false }
-          - { label: Link Hover, name: buttonHover, widget: color , required: false }
-          - { label: Background, name: background, widget: color , required: false }
-          - { label: Background Hover, name: backgroundHover, widget: color , required: false }
+          - { label: "Font Size",name: "button_size", widget: number, required: true, default: 16}
+          - { label: "Font Family",name: "button_font", widget: string, required: true, default: "Open Sans,sans-serif"}
+          - { label: "Font Weight",name: "button_weight", widget: number, required: true, default: 400 }
+          - { label: "Line Height",name: "button_height", widget: string, required: true, default: "1.2"}
+          - { label: Button, name: button, widget: color , required: true, default: "#000"}
+          - { label: Link Hover, name: buttonHover, widget: color , required: true, default: "#000"}
+          - { label: Background, name: background, widget: color , required: true,  default: "#000"}
+          - { label: Background Hover, name: backgroundHover, widget: color , required: true, default: "#000"}
       - label: "h1"
         name: "h1"
         file: "src/_data/styling/typography/h1.json"
         fields:
-          - { label: "Font Size",name: "h1_size", widget: number, required: false }
-          - { label: "Font Family",name: "h1_font", widget: string, required: false }
-          - { label: "Font Weight",name: "h1_weight", widget: number, required: false }
-          - { label: "Line Height",name: "h1_height", widget: string, required: false }
-          - { label: "Color", name: "h1_color", widget: color , required: false }
+          - { label: "Font Size",name: "h1_size", widget: number, required: true, default: 16 }
+          - { label: "Font Family",name: "h1_font", widget: string, required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "h1_weight", widget: number, required: true, default: 700 }
+          - { label: "Line Height",name: "h1_height", widget: string, required: true, default: "1.2" }
+          - { label: "Color", name: "h1_color", widget: color , required: true, default: "#000" }
       - label: "h2"
         name: "h2"
         file: "src/_data/styling/typography/h2.json"
         fields:
-          - { label: "Font Size",name: "h2_size", widget: number, required: false }
-          - { label: "Font Family",name: "h2_font", widget: string, required: false }
-          - { label: "Font Weight",name: "h2_weight", widget: number, required: false }
-          - { label: "Line Height",name: "h2_height", widget: string, required: false }
-          - { label: "Color", name: "h2_color", widget: color , required: false }
+          - { label: "Font Size",name: "h2_size", widget: number, required: true, default: 16 }
+          - { label: "Font Family",name: "h2_font", widget: string, required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "h2_weight", widget: number, required: true, default: 700 }
+          - { label: "Line Height",name: "h2_height", widget: string, required: true, default: "1.2" }
+          - { label: "Color", name: "h2_color", widget: color , required: true, default: "#000" }
       - label: "h3"
         name: "h3"
         file: "src/_data/styling/typography/h3.json"
         fields:
-          - { label: "Font Size",name: "h3_size", widget: number, required: false }
-          - { label: "Font Family",name: "h3_font", widget: string, required: false }
-          - { label: "Font Weight",name: "h3_weight", widget: number, required: false }
-          - { label: "Line Height",name: "h3_height", widget: string, required: false }
-          - { label: "Color", name: "h3_color", widget: color , required: false }
+          - { label: "Font Size",name: "h3_size", widget: number, required: true, default: 16 }
+          - { label: "Font Family",name: "h3_font", widget: string, required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "h3_weight", widget: number, required: true, default: 700 }
+          - { label: "Line Height",name: "h3_height", widget: string, required: true, default: "1.2" }
+          - { label: "Color", name: "h3_color", widget: color  , required: true, default: "#000" }
       - label: "h4"
         name: "h4"
         file: "src/_data/styling/typography/h4.json"
         fields:
-          - { label: "Font Size",name: "h4_size", widget: number, required: false }
-          - { label: "Font Family",name: "h4_font", widget: string, required: false }
-          - { label: "Font Weight",name: "h4_weight", widget: number, required: false }
-          - { label: "Line Height",name: "h4_height", widget: string, required: false }
-          - { label: "Color", name: "h4_color", widget: color , required: false }
+          - { label: "Font Size",name: "h4_size", widget: number, required: true, default: 16 }
+          - { label: "Font Family",name: "h4_font", widget: string, required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "h4_weight", widget: number, required: true, default: 700 }
+          - { label: "Line Height",name: "h4_height", widget: string, required: true, default: "1.2" }
+          - { label: "Color", name: "h4_color", widget: color  , required: true, default: "#000" }
       - label: "h5"
         name: "h5"
         file: "src/_data/styling/typography/h5.json"
         fields:
-          - { label: "Font Size",name: "h5_size", widget: number, required: false }
-          - { label: "Font Family",name: "h5_font", widget: string, required: false }
-          - { label: "Font Weight",name: "h5_weight", widget: number, required: false }
-          - { label: "Line Height",name: "h5_height", widget: string, required: false }
-          - { label: "Color", name: "h5_color", widget: color , required: false }
+          - { label: "Font Size",name: "h5_size", widget: number, required: true, default: 16 }
+          - { label: "Font Family",name: "h5_font", widget: string, required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "h5_weight", widget: number, required: true, default: 700 }
+          - { label: "Line Height",name: "h5_height", widget: string, required: true, default: "1.2" }
+          - { label: "Color", name: "h5_color", widget: color , required: true, default: "#000"  }
       - label: "h6"
         name: "h6"
         file: "src/_data/styling/typography/h6.json"
         fields:
-          - { label: "Font Size",name: "h6_size", widget: number, required: false }
-          - { label: "Font Family",name: "h6_font", widget: string, required: false }
-          - { label: "Font Weight",name: "h6_weight", widget: number, required: false }
-          - { label: "Line Height",name: "h6_height", widget: string, required: false }
-          - { label: "Color", name: "h6_color", widget: color , required: false }
+          - { label: "Font Size",name: "h6_size", widget: number, required: true, default: 16 }
+          - { label: "Font Family",name: "h6_font", widget: string, required: true, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "h6_weight", widget: number, required: true, default: 700 }
+          - { label: "Line Height",name: "h6_height", widget: string, required: true, default: "1.2" }
+          - { label: "Color", name: "h6_color", widget: color , required: true, default: "#000"  }
   - label: "Forms"
     name: "forms"
     editor:
