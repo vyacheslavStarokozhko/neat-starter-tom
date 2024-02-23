@@ -1,3 +1,8 @@
 {
-
+  "link_size": 19,
+  "link_font": "\"Helvetica\",Verdana,Arial,sans-serif",
+  "link_weight": 400,
+  "link_height": "1.2",
+  "link": "#ff0000",
+  "linkHover": "#000000"
 }
