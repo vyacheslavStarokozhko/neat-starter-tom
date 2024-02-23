@@ -7,9 +7,9 @@
                 </a>
             </div>
             <div class="social-container">
-                {% if site_identity.socials %}
+                {% if header.socials %}
                 <ul class="social-menu">
-                    {% for social in site_identity.socials %}
+                    {% for social in header.socials %}
                     <li class="social-item">
                         <a href="{{ social.url }}">
                             <i class="{{social.icon}}"></i>
