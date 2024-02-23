@@ -29,16 +29,22 @@ collections:
             fields:
               - { label: Url, name: url, widget: string }
               - { label: Icon, name: icon, widget: string }
-  - label: "Styles"
-    name: "styles"
+      - label: "Meta Settings"
+        name: "settings"
+        file: "src/_data/settings.yaml"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Author, name: author, widget: string }
+          - { label: URL, name: url, widget: string }
+  - label: "Colors"
+    name: "colors"
     editor:
       preview: false
     files:
-      - label: "Styles"
+      - label: "Colors"
         name: "color_styles"
-        file: "src/_data/styles.json"
+        file: "src/_data/styling/colors/colors.json"
         fields:
-          - { label: Body, name: body, widget: color , required: false }
           - { label: Container Background, name: containerColor, widget: color , required: false }
           - { label: Primary, name: primary, widget: color , required: false }
           - { label: Secondary, name: Secondary, widget: color , required: false }
@@ -46,103 +52,109 @@ collections:
           - { label: Success, name: success, widget: color , required: false }
           - { label: Warning, name: warning, widget: color , required: false }
           - { label: Danger, name: danger, widget: color , required: false }
-          - { label: Link, name: link, widget: color , required: false }
-          - { label: Link Hover, name: linkHover, widget: color , required: false }
-          - { label: Button Text, name: buttonText, widget: color , required: false }
-          - { label: Button Background, name: buttonBackground, widget: color , required: false }
-          - { label: Button Hover Text, name: buttonHoverText, widget: color , required: false }
-          - { label: Button Hover Background, name: buttonHoverBackground, widget: color , required: false }
-          - { label: Text, name: text, widget: color , required: false }
-          - { label: h1, name: h1, widget: color , required: false }
-          - { label: h2, name: h2, widget: color , required: false }
-          - { label: h3, name: h3, widget: color , required: false }
-          - { label: h4, name: h4, widget: color , required: false }
-          - { label: h5, name: h5, widget: color , required: false }
-          - { label: h6, name: h6, widget: color , required: false }
           - { label: Socials Background, name: socialsBackground, widget: color , required: false }
           - { label: SocialsColor, name: socialsColor, widget: color , required: false }
+  - label: "Sizing"
+    name: "sizing"
+    editor:
+      preview: false
+    files:
       - label: "Sizing"
         name: "sizing_styles"
-        file: "src/_data/sizing.json"
+        file: "src/_data/styling/sizing/sizing.json"
         fields:
           - { label: Container Width, name: globalWidth, widget: number }
           - { label: Container padding, name: containerPadding, widget: number }
-      - label: "Typography"
-        name: "typography_styles"
-        file: "src/_data/typography.json"
+  - label: "Typography"
+    name: "typography"
+    editor:
+      preview: false
+    files:
+      - label: "Body"
+        name: "body_text"
+        file: "src/_data/styling/typography/body.json"
         fields:
-          - label: "Body"
-            name: "body"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "size", widget: number }
-              - { label: "Font Family",name: "font", widget: string }
-              - { label: "Font Weight",name: "weight", widget: number }
-              - { label: "Line Height",name: "height", widget: string }
-          - label: "Text"
-            name: "text"
-            widget: "object"
-            fields:
-              - {label: "Font Size",name: "_size", widget: number}
-              - {label: "Font Family",name: "_font", widget: string}
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - {label: "Line Height",name: "_height", widget: string}
-          - label: "Link"
-            name: "link"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
-          - label: "h1"
-            name: "h1"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
-          - label: "h2"
-            name: "h2"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
-          - label: "h3"
-            name: "h3"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
-          - label: "h4"
-            name: "h4"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
-          - label: "h5"
-            name: "h5"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
-          - label: "h6"
-            name: "h6"
-            widget: "object"
-            fields:
-              - { label: "Font Size",name: "_size", widget: number }
-              - { label: "Font Family",name: "_font", widget: string }
-              - {label: "Font Weight",name: "_weight", widget: number}
-              - { label: "Line Height",name: "_height", widget: string }
+          - { label: "Font Size",name: "body_size", widget: number }
+          - { label: "Font Family",name: "body_font", widget: string }
+          - { label: "Font Weight",name: "body_weight", widget: number }
+          - { label: "Line Height",name: "body_height", widget: string }
+          - { label: Body, name: body, widget: color , required: false }
+      - label: "Link"
+        name: "link"
+        file: "src/_data/styling/typography/link.json"
+        fields:
+          - { label: "Font Size",name: "link_size", widget: number }
+          - { label: "Font Family",name: "link_font", widget: string }
+          - { label: "Font Weight",name: "link_weight", widget: number }
+          - { label: "Line Height",name: "link_height", widget: string }
+          - { label: Link, name: link, widget: color , required: false }
+          - { label: Link Hover, name: linkHover, widget: color , required: false }
+      - label: "Button"
+        name: "button"
+        file: "src/_data/styling/typography/button.json"
+        fields:
+          - { label: "Font Size",name: "button_size", widget: number }
+          - { label: "Font Family",name: "button_font", widget: string }
+          - { label: "Font Weight",name: "button_weight", widget: number }
+          - { label: "Line Height",name: "button_height", widget: string }
+          - { label: Button, name: button, widget: color , required: false }
+          - { label: Link Hover, name: buttonHover, widget: color , required: false }
+          - { label: Background, name: background, widget: color , required: false }
+          - { label: Background Hover, name: backgroundHover, widget: color , required: false }
+      - label: "h1"
+        name: "h1"
+        file: "src/_data/styling/typography/h1.json"
+        fields:
+          - { label: "Font Size",name: "h1_size", widget: number, required: false }
+          - { label: "Font Family",name: "h1_font", widget: string, required: false }
+          - { label: "Font Weight",name: "h1_weight", widget: number, required: false }
+          - { label: "Line Height",name: "h1_height", widget: string, required: false }
+          - { label: "Color", name: "h1_color", widget: color , required: false }
+      - label: "h2"
+        name: "h2"
+        file: "src/_data/styling/typography/h2.json"
+        fields:
+          - { label: "Font Size",name: "h2_size", widget: number, required: false }
+          - { label: "Font Family",name: "h2_font", widget: string, required: false }
+          - { label: "Font Weight",name: "h2_weight", widget: number, required: false }
+          - { label: "Line Height",name: "h2_height", widget: string, required: false }
+          - { label: "Color", name: "h2_color", widget: color , required: false }
+      - label: "h3"
+        name: "h3"
+        file: "src/_data/styling/typography/h3.json"
+        fields:
+          - { label: "Font Size",name: "h3_size", widget: number, required: false }
+          - { label: "Font Family",name: "h3_font", widget: string, required: false }
+          - { label: "Font Weight",name: "h3_weight", widget: number, required: false }
+          - { label: "Line Height",name: "h3_height", widget: string, required: false }
+          - { label: "Color", name: "h3_color", widget: color , required: false }
+      - label: "h4"
+        name: "h4"
+        file: "src/_data/styling/typography/h4.json"
+        fields:
+          - { label: "Font Size",name: "h4_size", widget: number, required: false }
+          - { label: "Font Family",name: "h4_font", widget: string, required: false }
+          - { label: "Font Weight",name: "h4_weight", widget: number, required: false }
+          - { label: "Line Height",name: "h4_height", widget: string, required: false }
+          - { label: "Color", name: "h4_color", widget: color , required: false }
+      - label: "h5"
+        name: "h5"
+        file: "src/_data/styling/typography/h5.json"
+        fields:
+          - { label: "Font Size",name: "h5_size", widget: number, required: false }
+          - { label: "Font Family",name: "h5_font", widget: string, required: false }
+          - { label: "Font Weight",name: "h5_weight", widget: number, required: false }
+          - { label: "Line Height",name: "h5_height", widget: string, required: false }
+          - { label: "Color", name: "h5_color", widget: color , required: false }
+      - label: "h6"
+        name: "h6"
+        file: "src/_data/styling/typography/h6.json"
+        fields:
+          - { label: "Font Size",name: "h6_size", widget: number, required: false }
+          - { label: "Font Family",name: "h6_font", widget: string, required: false }
+          - { label: "Font Weight",name: "h6_weight", widget: number, required: false }
+          - { label: "Line Height",name: "h6_height", widget: string, required: false }
+          - { label: "Color", name: "h6_color", widget: color , required: false }
   - label: "Forms"
     name: "forms"
     editor:
@@ -220,18 +232,7 @@ collections:
         multiple: true
         create: true
         options: [ "Tags", "created", "from", "config.yml" ]
-  - label: "Settings"
-    name: "settings"
-    editor:
-      preview: false
-    files:
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+
   - label: "Footer"
     name: "global_footer"
     editor:

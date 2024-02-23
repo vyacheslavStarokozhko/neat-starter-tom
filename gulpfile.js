@@ -10,7 +10,7 @@ var concat = require('gulp-concat');
 // const markdown = require("gulp-markdown");
 
 function jsonColorCss() {
-    return src("./src/_data/styles.json").pipe(
+    return src("./src/_data/styling/colors/colors.json").pipe(
         jsonToSass({
             sass: "./src/scss/vars/_color.scss",
             separator: "",
@@ -19,7 +19,7 @@ function jsonColorCss() {
 }
 
 function jsonSizingCss() {
-    return src("./src/_data/sizing.json").pipe(
+    return src("./src/_data/styling/sizing/sizing.json").pipe(
         jsonToSass({
             sass: "./src/scss/vars/_sizing.scss",
             separator: "",
@@ -28,7 +28,7 @@ function jsonSizingCss() {
 }
 
 function jsonTypographyCss() {
-    return src("./src/_data/typography.json")
+    return src("./src/_data/styling/typography/*.json")
         .pipe(
             jsonToSass({
                 sass: "./src/scss/vars/_typography.scss",
@@ -37,17 +37,7 @@ function jsonTypographyCss() {
                 separator: ''
             })
         )
-
-
 }
-
-
-// function markdown() {
-//     return src("./src/**/*md")
-//         .pipe(markdown())
-//         .pipe(dest('dist'))
-// }
-
 
 function cssTask() {
     return src("./src/scss/*.scss", {allowEmpty: true})
@@ -68,10 +58,16 @@ function jsTask() {
 
 
 function watchFiles() {
+
+    // ("./src/_data/styling/colors/colors.json")
+    // ("./src/_data/styling/sizing/sizing.json")
+    // ("./src/_data/styling/typography/*.json")
+
+
     watch("./src/scss/**/*.scss", parallel(cssTask));
-    watch("./src/_data/styles.json", parallel(jsonColorCss));
-    watch("./src/_data/sizing.json", parallel(jsonSizingCss));
-    watch("./src/_data/typography.json", parallel(jsonTypographyCss));
+    watch("./src/_data/styling/colors/colors.json", parallel(jsonColorCss));
+    watch("./src/_data/styling/sizing/sizing.json", parallel(jsonSizingCss));
+    watch("./src/_data/styling/typography/*.json", parallel(jsonTypographyCss));
     watch("./src/static/js/*.js", parallel(jsTask));
 }
 
