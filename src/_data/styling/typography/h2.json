@@ -1,7 +1,7 @@
 {
-  "h2_size": 32,
-  "h2_color": "#0a0a0a",
-  "h2_height": "1.4",
+  "h2_size": 34,
+  "h2_color": "#73b3c3",
+  "h2_height": "1.2",
   "h2_weight": 400,
-  "h2_font": "\"Georgia\",Times,serif"
+  "h2_font": "roboto slab,serif"
 }
