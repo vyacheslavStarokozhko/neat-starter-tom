@@ -3,5 +3,6 @@
   "body_font": "\"Helvetica\",Verdana,Arial,sans-serif",
   "body_weight": 400,
   "body_height": "1.5",
-  "body": "#000000"
+  "body": "#000000",
+  "body_background": "#f2f2f2"
 }
