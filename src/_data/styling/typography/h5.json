@@ -1,7 +1,7 @@
 {
-  "h5_size": 20,
-  "h5_font": "\"Georgia\",Times,serif",
-  "h5_weight": 400,
+  "h5_size": 24,
+  "h5_font": "roboto slab,serif",
+  "h5_weight": 700,
   "h5_height": "1.2",
-  "h5_color": "#0a0a0a"
+  "h5_color": "#333333"
 }
