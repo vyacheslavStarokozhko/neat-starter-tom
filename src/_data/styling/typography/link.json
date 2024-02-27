@@ -1,8 +1,8 @@
 {
-  "link_size": 19,
-  "link_font": "\"Helvetica\",Verdana,Arial,sans-serif",
+  "link_size": 18,
+  "link_font": "ave,Open Sans,Arial,sans-serif",
   "link_weight": 400,
-  "link_height": "1.2",
-  "link": "#ff0000",
-  "linkHover": "#000000"
+  "link_height": "1.6",
+  "link": "#1f1fff",
+  "linkHover": "#00009e"
 }
