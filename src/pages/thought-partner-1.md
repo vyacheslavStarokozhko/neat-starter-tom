@@ -20,10 +20,12 @@ description: |-
   * [Executive Coach](#)
   * [Executive Coach](#)
 page_body: >-
-  <!--StartFragment-->
-
-
-  As a Thought Partner, I offer a unique perspective and set of skills to help you as a business or organizational leader navigate personal, professional, and leadership issues and how they intersect. I bring an experience-based perspective, a genuine curiosity about key issues, and a range of listening and question-asking skills to assist you in formulating better thinking about your present situations, your past experience and your future.
+  As a Thought Partner, I offer a unique perspective and set of skills to help
+  you as a business or organizational leader navigate personal, professional,
+  and leadership issues and how they intersect. I bring an experience-based
+  perspective, a genuine curiosity about key issues, and a range of listening
+  and question-asking skills to assist you in formulating better thinking about
+  your present situations, your past experience and your future.
 
 
   My role as a thought partner is to understand the subject at hand for you, the values you are operating from, the outcomes you desire, and to mobilize a variety of communication tools to support your thought process.
@@ -56,9 +58,6 @@ page_body: >-
   * IMPORTANT: This is not a coaching agreement. This is a Thought Partnership, to enhance your thinking about your life, role, project, idea, business or anything else.
 
   * Please note: I have a no refund policy on this agreement because I choose to work with people who play full out. If you’re in, you’re fully in. It’s called Commitment. You’re a Hell Yes. Or you’re a Hell No. Nothing in between.
-
-
-  <!--EndFragment-->
 bottom: |-
   ## Ready to engage in deep, powerful conversations?
 
