@@ -186,13 +186,17 @@ collections:
       - { label: "Caption", name: "caption", widget: "markdown" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Body", name: "page_body", widget: "markdown" }
-      - { label: "Bottom", name: "bottom", widget: "markdown" }
-      - label: Tags
-        name: page_tag
-        widget: select
-        multiple: true
-        create: true
-        options: [ "Tag 1", "Tag 2" ]
+      - { label: "Bottom", name: "bottom", widget: "markdown" ,required: false}
+      - {label: "Tabs Label", name: "tabs_label",widget: string  ,required: false}
+      - label: Tabs
+        name: tabs
+        widget: list
+        allow_add: true
+        collapsed: false
+        required: false
+        fields:
+          - { label: Label, name: tab_label, widget: string }
+          - { label: Description, name: tab_description, widget: "markdown" }
   - label: "Podcasts"
     name: "podcasts"
     folder: "src/podcasts"

@@ -2,56 +2,57 @@ $body_size: 17;
 $body_font: "Helvetica",Verdana,Arial,sans-serif;
 $body_weight: 400;
 $body_height: 1.5;
-$body: #000000;
+$body: #0a0a0a;
+$body_background: #f2f2f2;
 
 $button_font: "Helvetica",Verdana,Arial,sans-serif;
 $button_size: 16;
 $button_weight: 400;
-$button_height: 1.2;
+$button_height: 1.1;
 $button: #000000;
-$buttonHover: #ff0000;
-$background: #dadada;
-$backgroundHover: #ffffff;
+$buttonHover: #ffffff;
+$background: #17bebb;
+$backgroundHover: #e4572e;
 
 $h1_size: 36;
 $h1_font: "Georgia",Times,serif;
-$h1_weight: 400;
+$h1_weight: 700;
 $h1_height: 1.4;
 $h1_color: #0a0a0a;
 
-$h2_size: 32;
-$h2_color: #0a0a0a;
+$h2_size: 30;
+$h2_color: #ffffff;
 $h2_height: 1.4;
-$h2_weight: 400;
+$h2_weight: 700;
 $h2_font: "Georgia",Times,serif;
 
 $h3_font: "Georgia",Times,serif;
-$h3_weight: 400;
+$h3_weight: 700;
 $h3_height: 1.4;
 $h3_color: #0a0a0a;
-$h3_size: 28;
+$h3_size: 24;
 
-$h4_size: 24;
+$h4_size: 18;
 $h4_color: #0a0a0a;
 $h4_height: 1.4;
-$h4_weight: 400;
+$h4_weight: 700;
 $h4_font: "Georgia",Times,serif;
 
-$h5_size: 20;
+$h5_size: 14;
 $h5_font: "Georgia",Times,serif;
-$h5_weight: 400;
-$h5_height: 1.2;
+$h5_weight: 700;
+$h5_height: 1.4;
 $h5_color: #0a0a0a;
 
-$h6_size: 16;
+$h6_size: 12;
 $h6_color: #0a0a0a;
-$h6_weight: 400;
+$h6_weight: 700;
 $h6_height: 1.4;
 $h6_font: "Georgia",Times,serif;
 
-$link_size: 19;
-$link_font: "Helvetica",Verdana,Arial,sans-serif;
+$link_size: 18;
+$link_font: ave,Open Sans,Arial,sans-serif;
 $link_weight: 400;
-$link_height: 1.2;
-$link: #ff0000;
-$linkHover: #000000;
+$link_height: 1.6;
+$link: #ffc914;
+$linkHover: #00009e;

@@ -1,0 +1,53 @@
+.accordion{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	.accordion-button{
+		padding: 10px 20px;
+		cursor: pointer;
+background: $socialsBackground;
+		color: $black;
+border-radius: 0;
+		border-width: 3px;
+		border-color: rgba(0,0,0,0);
+		&.is-active,&:hover{
+color: $white;
+			background-color: $buttonBackground;
+		}
+		&.is-active{
+			pointer-events: none;
+			cursor: auto;
+			border-color: $black;
+			border-bottom-color: rgba(0,0,0,0);
+			position: relative;
+			&:before{
+			transition: 0.3s;
+			    content: '';
+			    position: absolute;
+			    bottom: -6px;
+			    left: 0px;
+			    width: 100%;
+			    height: 3px;
+			    background-color: $white;
+
+			}
+		}
+	}
+	.accordion-content{
+		padding: 20px;
+		display: none;
+		border-width: 3px;
+		border-style: solid;
+		&.is-active{
+			display: block;
+			border-color: $black;
+		}
+	}
+	&-labels{
+		display: flex;
+	}
+	&-contents{
+		&:has(.is-active){
+
+		}
+	}
+}

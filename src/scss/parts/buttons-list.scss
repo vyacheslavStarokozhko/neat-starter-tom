@@ -1,20 +1,31 @@
-.cta{
+.cta {
 	padding: 24px;
 	background-color: $black;
-	&__title{
-		h2{
+
+	&__title {
+		text-align: center;
+
+		h2 {
 			color: $white;
 		}
 	}
-	ul{
+
+	ul {
 		margin-top: 20px;
 	}
 
-	.page-cta{
+	.page-cta {
+		text-align: center;
 		color: $white;
-		ul{
+		padding: 30px;
+
+		ul {
 
 		}
-	}
 
+		&:has(ul) {
+			padding: 0;
+			text-align: start;
+		}
+	}
 }

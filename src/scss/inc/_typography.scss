@@ -5,24 +5,26 @@ a,button,i{
 a{
 	//color: $link;
 	font-family: $link_font;
-	font-size: $link_size;
+	font-size: px($link_size);
 	font-weight: $link_weight;
 	line-height: $link_height;
 
 }
 button,.button,
 .page-cta>ul li a{
-	font-size: 16px;
+	font-family: $button_font;
+	font-size: px($button_size);
+	font-weight: $button_weight;
+	line-height: $button_height;
 	padding: 12px 24px;
-	background-color: $buttonBackground;
-	color:$buttonText;
+	background-color: $background;
+	color:$button;
 	border: 1px solid #0bb2af;
-	line-height: 18px;
 	border-radius: 5px;
 	display: inline-block;
 	&:hover{
-	    color: $buttonHoverText;
-		background-color: $buttonHoverBackground;
+	    color: $buttonHover;
+		background-color: $backgroundHover;
 	}
 }
 p{
@@ -37,7 +39,7 @@ p{
 
 
 input[type="submit"],button[type="submit"]{
-	font-size: 16px;
+	font-size: px($button_size);
 	padding: 12px 24px;
 	color: $buttonHoverText;
 	background-color: $buttonHoverBackground;
@@ -51,49 +53,49 @@ input[type="submit"],button[type="submit"]{
 
 body{
 	font-family: $body_font;
-	font-size: $body_size;
+	font-size: px($body_size);
 	font-weight: $body_weight;
 	line-height: $body_height;
 }
 h1{
 	//color: $h1;
 	font-family: $h1_font;
-	font-size: $h1_size;
+	font-size: px($h1_size);
 	font-weight: $h1_weight;
 	line-height: $h1_height;
 }
 h2{
 	//color: $h2;
 	font-family: $h2_font;
-	font-size: $h2_size;
+	font-size: px($h2_size);
 	font-weight: $h2_weight;
 	line-height: $h2_height;
 }
 h3{
 	//color: $h3;
 	font-family: $h3_font;
-	font-size: $h3_size;
+	font-size: px($h3_size);
 	font-weight: $h3_weight;
 	line-height: $h3_height;
 }
 h4{
 	//color: $h4;
 	font-family: $h4_font;
-	font-size: $h4_size;
+	font-size: px($h4_size);
 	font-weight: $h4_weight;
 	line-height: $h4_height;
 }
 h5{
 	//color: $h5;
 	font-family: $h5_font;
-	font-size: $h5_size;
+	font-size: px($h5_size);
 	font-weight: $h5_weight;
 	line-height: $h5_height;
 }
 h6{
 	//color: $h6;
 	font-family: $h6_font;
-	font-size: $h6_size;
+	font-size: px($h6_size);
 	font-weight: $h6_weight;
 	line-height: $h6_height;
 }
