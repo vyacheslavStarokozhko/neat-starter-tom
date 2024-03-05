@@ -3,8 +3,8 @@
   "button_size": 16,
   "button_weight": 400,
   "button_height": "1.1",
-  "button": "#ffffff",
-  "buttonHover": "#000000",
+  "button": "#000000",
+  "buttonHover": "#ffffff",
   "background": "#17bebb",
   "backgroundHover": "#e4572e"
 }
