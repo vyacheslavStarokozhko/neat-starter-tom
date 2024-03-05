@@ -62,7 +62,7 @@ page_body: >-
 
   * Access to me as needed or included in your program for ongoing concerns and support
 bottom: |-
-  ## Are you ready for your life and business to transform? 
+  ## Are you ready for your life and business to transform?
 
   [Contact Me Today](/contact-tom/)
 tabs_label: Coaching Options I Provide with Associated Fees
