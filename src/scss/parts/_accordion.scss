@@ -41,6 +41,10 @@ color: $white;
 			display: block;
 			border-color: $black;
 		}
+		ul{
+			list-style: disc;
+			margin-left: 24px;
+		}
 	}
 	&-labels{
 		display: flex;
