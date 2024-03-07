@@ -1,10 +1,12 @@
 {
   "_fonts": [
     {
-      "font_url": "/static/img/acuminpro-light.woff2"
+      "font_url": "/static/img/acuminpro-light.woff2",
+      "font_label": "acum"
     },
     {
-      "font_url": "/static/img/acuminpro-bold.woff2"
+      "font_url": "/static/img/acuminpro-bold.woff2",
+      "font_label": "acum"
     }
   ]
 }
