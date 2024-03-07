@@ -1,0 +1,10 @@
+@use '../fonts/font' as font;
+
+@each $name, $url in font {
+	@font-face {
+		font-family: $name;
+		src:
+				local($name),
+				url($url) format("woff2");
+	}
+}

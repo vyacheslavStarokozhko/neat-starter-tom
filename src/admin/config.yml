@@ -12,6 +12,24 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
+  - label: "Fonts"
+    name: "fonts"
+    editor:
+      preview: false
+    files:
+      - label: "Upload Fonts"
+        name: "upload_fonts"
+        file: "src/_data/upload_fonts.json"
+        fields:
+          - label: Fonts
+            name: _fonts
+            widget: list
+            allow_add: true
+            collapsed: true
+            required: false
+            fields:
+              - { label: Label, name: font_label, widget: string }
+              - { label: Font, name: font_url, widget: file }
   - label: "Site Settings"
     name: "site_settings"
     editor:

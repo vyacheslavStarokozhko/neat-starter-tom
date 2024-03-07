@@ -6,8 +6,39 @@ const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
 const jsonToSass = require("gulp-json-data-to-sass");
 var concat = require('gulp-concat');
+var jsontosass = require("jsontosass");
+var jsonSass = require('gulp-json-sass');
 
 // const markdown = require("gulp-markdown");
+
+
+
+function jsonFonts() {
+    // return src("./src/_data/upload_fonts.json")
+    //     .pipe(jsonSass({
+    //         sass: true
+    //     }))
+    //     .pipe(concat('./src/scss/fonts/_font.scss'))
+
+
+
+
+    return src("./src/_data/upload_fonts.json").pipe(
+        jsonToSass({
+            sass: "./src/scss/fonts/_font.scss",
+            prefix: '',
+            suffix: '',
+            separator: ''
+        })
+    );
+
+
+
+
+
+}
+
+
 
 function jsonColorCss() {
     return src("./src/_data/styling/colors/colors.json").pipe(
@@ -59,12 +90,10 @@ function jsTask() {
 
 function watchFiles() {
 
-    // ("./src/_data/styling/colors/colors.json")
-    // ("./src/_data/styling/sizing/sizing.json")
-    // ("./src/_data/styling/typography/*.json")
 
 
     watch("./src/scss/**/*.scss", parallel(cssTask));
+    // watch("./src/_data/styling/colors/upload_fonts.json", parallel(jsonFonts));
     watch("./src/_data/styling/colors/colors.json", parallel(jsonColorCss));
     watch("./src/_data/styling/sizing/sizing.json", parallel(jsonSizingCss));
     watch("./src/_data/styling/typography/*.json", parallel(jsonTypographyCss));
