@@ -23,7 +23,7 @@
                 {% if header.header_links %}
                 <ul class='main-menu'>
                     {% for link in header.header_links %}
-                    <li class="menu-item first-item">
+                    <li class="menu-item first-item {% if link.second_links %} has-submenu {% endif %}">
                         <a href="{{ link.url }}">
                             <span class="text">
                                 {{link.label}}
@@ -36,10 +36,10 @@
                         {% if link.second_links %}
                         <ul class="submenu second">
                             {% for second_link in link.second_links %}
-                            <li class="menu-item submenu-item second-item">
+                            <li class="menu-item submenu-item second-item {% if second_link.third_links %} has-submenu {% endif %}">
                                 <a href="{{second_link.url }}">
                                     <span class="text">{{second_link.label}}
-                                                                {% if link.third_links %}
+                                                                {% if second_link.third_links %}
 <span class="icon"></span>
                                 {% endif %}
                                     </span>
@@ -48,10 +48,10 @@
                                 {% if second_link.third_links %}
                                 <ul class="submenu third">
                                     {% for third_link in second_link.third_links %}
-                                    <li class="menu-item submenu-item third-item">
+                                    <li class="menu-item submenu-item third-item {% if third_link.fourth_links %} has-submenu {% endif %}">
                                         <a href="{{third_link.url }}">
                                             <span class="text">
-                                                                            {% if link.fourth_links %}
+                                                                            {% if third_link.fourth_links %}
 <span class="icon"></span>
                                 {% endif %}
                                                 {{third_link.label}}
@@ -61,7 +61,7 @@
                                         {% if third_link.fourth_links %}
                                         <ul class="submenu fourth">
                                             {% for fourth_link in third_link.fourth_links %}
-                                            <li class="menu-item submenu-item fourth-item">
+                                            <li class="menu-item submenu-item fourth-item ">
                                                 <a href="{{fourth_link.url }}">
                                                     <span>{{fourth_link.label}}</span>
                                                 </a>

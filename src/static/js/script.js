@@ -35,6 +35,24 @@
         InitAccordion()
 
 
+        $('li.has-submenu').hover(function (e){
+            let $this = $(e.target);
+            // $this.addClass('is-active');
+            $this.closest('li.has-submenu').addClass('is-active');
+            $this.find('> ul').addClass('is-active');
+            $this.find('+ ul').addClass('is-active');
+        },
+            function (e){
+                // let $this = $(e.target);
+
+                $('ul.submenu').removeClass('is-active');
+                $('li.has-submenu').removeClass('is-active');
+
+            })
+
+
+
+
     })
 })(jQuery);
 
