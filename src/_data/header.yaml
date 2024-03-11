@@ -16,6 +16,12 @@ header_links:
         url: /my-story/
       - label: My Book
         url: /you-are-the-logo/
+        third_links:
+          - url: /executive-coach/
+            label: Executive Coach
+            fourth_links:
+              - label: Executive Coach
+                url: /executive-coach/
       - label: Media and Guest Appearances
         url: /media-guest/
   - label: Work With Me
@@ -35,5 +41,3 @@ header_links:
     url: /contact-tom/
   - label: Podcasts
     url: /podcast/
-  - label: Executive Coach
-    url: /executive-coach/
