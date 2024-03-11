@@ -123,3 +123,18 @@ width: 100%;
 	color: $white;
 	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.39);
 }
+
+
+.form-embeded{
+	text-align: center;
+	form{
+		div{
+			padding: 0 !important;
+		}
+		.seva-fields{
+			>*{
+				width: 100%;
+			}
+		}
+	}
+}
