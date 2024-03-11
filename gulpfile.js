@@ -5,32 +5,24 @@ const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const sourcemaps = require("gulp-sourcemaps");
 const jsonToSass = require("gulp-json-data-to-sass");
-var concat = require('gulp-concat');
-var jsontosass = require("jsontosass");
-var jsonSass = require('gulp-json-sass');
-
-// const markdown = require("gulp-markdown");
+const fonter = require('gulp-fonter');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const fs = require('fs');
 
 
+function fontsTofont(){
+    return src("./src/static/img/*.{woff2,woff}")
+        .pipe(dest("./src/static/img/fonts"))
+}
 
-function jsonFonts() {
-    // return src("./src/_data/upload_fonts.json")
-    //     .pipe(jsonSass({
-    //         sass: true
-    //     }))
-    //     .pipe(concat('./src/scss/fonts/_font.scss'))
-
+function otfToTtf() {
 
 
-
-    return src("./src/_data/upload_fonts.json").pipe(
-        jsonToSass({
-            sass: "./src/scss/fonts/_font.scss",
-            prefix: '',
-            suffix: '',
-            separator: ''
-        })
-    );
+    return src("./src/static/img/*.otf",{})
+        .pipe(fonter({
+            formats:['ttf']
+        }))
+        .pipe(dest("./src/static/img/"))
 
 
 
@@ -38,7 +30,62 @@ function jsonFonts() {
 
 }
 
+function ttfToWoff() {
+    return src("./src/static/img/*.ttf",{})
+        .pipe(ttf2woff2())
+        .pipe(dest("./src/static/img/"))
+}
 
+
+
+function fontsStyles(){
+    let fontsStyleFile = './src/scss/compile/_fonts.scss';
+
+
+
+
+
+fs.readFile("./src/_data/upload_fonts.json", "utf8", (error, data) =>{
+    if (error) {
+        console.log(error);
+        return;
+    }
+    var fontsFiles = JSON.parse(data)._fonts;
+    // console.log(fontsFiles._fonts);
+
+    var newFileOnly;
+    for (var i = 0; i< fontsFiles.length; i++){
+        // font_label
+        // font_style
+        // font_weight
+        // font_url
+
+
+
+        let currentFile = fontsFiles[i];
+        let fontFileName = currentFile.font_url.split('/')[currentFile.font_url.split('/').length - 1].split('.')[0];
+
+        // console.log('currentFile', currentFile);
+        // console.log('fontFileName', fontFileName);
+
+
+        if (newFileOnly !== fontFileName){
+
+            let fontName = currentFile.font_label;
+            let fontWeight = currentFile.font_weight;
+            let fontStyle = currentFile.font_style;
+            fs.writeFile(fontsStyleFile, '', () => {});
+
+            fs.appendFile(fontsStyleFile,
+                `@font-face { font-family: ${fontName}; font-weight: ${fontWeight}; font-style:${fontStyle};src: url("../img/fonts/${fontFileName}.woff2") format("woff2"),url("../img/fonts/${fontFileName}.woff") format("woff")}`,
+                function (){}
+            )
+            newFileOnly = fontFileName
+        }
+    }
+})
+    return src('./src')
+}
 
 function jsonColorCss() {
     return src("./src/_data/styling/colors/colors.json").pipe(
@@ -86,7 +133,10 @@ function jsTask() {
         .pipe(sourcemaps.write("."))
         .pipe(dest("./_site/static/js/"));
 }
-
+function fontsTask(){
+    return src('./src/static/img/fonts/*.{woff,woff2}')
+        .pipe(dest('./_site/static/img/fonts/'))
+}
 
 function watchFiles() {
 
@@ -100,6 +150,10 @@ function watchFiles() {
     watch("./src/static/js/*.js", parallel(jsTask));
 }
 
-exports.build = series(jsonColorCss, jsonSizingCss, jsonTypographyCss, jsTask, cssTask);
+exports.build = series(otfToTtf, ttfToWoff,fontsTofont,
+    fontsStyles,
+    jsonColorCss, jsonSizingCss, jsonTypographyCss, fontsTask,jsTask, cssTask);
 
-exports.default = series(jsonColorCss, jsonSizingCss, jsonTypographyCss, parallel(cssTask, jsTask, watchFiles));
+exports.default = series(otfToTtf, ttfToWoff,fontsTofont,
+    fontsStyles,
+    jsonColorCss, jsonSizingCss, jsonTypographyCss, parallel( fontsTask, jsTask,cssTask, watchFiles));

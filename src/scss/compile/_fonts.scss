@@ -1,10 +1,1 @@
-@use '../fonts/font' as font;
-
-@each $name, $url in font {
-	@font-face {
-		font-family: $name;
-		src:
-				local($name),
-				url($url) format("woff2");
-	}
-}
+@font-face { font-family: acum; font-weight: 300; font-style:normal;src: url("../img/fonts/acuminpro-light.woff2") format("woff2"),url("../img/fonts/acuminpro-light.woff") format("woff")}@font-face { font-family: acum; font-weight: 700; font-style:normal;src: url("../img/fonts/acuminpro-bold.woff2") format("woff2"),url("../img/fonts/acuminpro-bold.woff") format("woff")}

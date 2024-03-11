@@ -29,6 +29,14 @@ collections:
             required: false
             fields:
               - { label: Label, name: font_label, widget: string }
+              - { label: Style, name: font_style, widget: select,
+                                                    multiple: false,
+                                                    create: false,
+                                                    options: [ "normal", "italic" ] }
+              - { label: Weight, name: font_weight, widget: select,
+                                                      multiple: false,
+                                                      create: false,
+                                                      options: [ "100", "200", "300", "400", "500", "600", "700", "800", "900" ] }
               - { label: Font, name: font_url, widget: file }
   - label: "Site Settings"
     name: "site_settings"
