@@ -83,6 +83,7 @@ collections:
         fields:
           - { label: Container Width, name: globalWidth, widget: number }
           - { label: Container padding, name: containerPadding, widget: number }
+          - { label: Paragraph spacing, name: paragraphSpacing, widget: number }
           - { label: Sidebar Width, name: sidebarWidth, widget: number , hint: "in %"}
   - label: "Typography"
     name: "typography"
