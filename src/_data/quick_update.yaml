@@ -5,6 +5,6 @@ caption: >-
   From engaging podcast episodes to new training videos and thought-provoking insights, I'll send your way. Subscribe to my irregular email newsletter that will only come when I have something worth sharing.
 form_logo: /static/img/download.svg
 form_url: https://convertkit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic
-form_type: code
+form_type: custom
 form_data: <script async data-uid="e76ec72d4d"
   src="https://tomadams.ck.page/e76ec72d4d/index.js"></script>
