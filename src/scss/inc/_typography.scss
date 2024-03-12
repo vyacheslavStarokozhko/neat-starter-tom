@@ -29,6 +29,9 @@ button,.button,
 }
 p{
 	margin-bottom: px($paragraphSpacing);
+	@media (max-width: px($mediumBreakpoint)) {
+		margin-bottom: 0;
+	}
 }
 
 

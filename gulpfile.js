@@ -96,10 +96,23 @@ function jsonColorCss() {
     );
 }
 
+
+// breakpoints.json
+
 function jsonSizingCss() {
     return src("./src/_data/styling/sizing/sizing.json").pipe(
         jsonToSass({
             sass: "./src/scss/vars/_sizing.scss",
+            separator: "",
+        })
+    );
+}
+
+
+function jsonBreakpointsCss() {
+    return src("./src/_data/styling/sizing/breakpoints.json").pipe(
+        jsonToSass({
+            sass: "./src/scss/vars/_breakpoints.scss",
             separator: "",
         })
     );
@@ -146,14 +159,15 @@ function watchFiles() {
     // watch("./src/_data/styling/colors/upload_fonts.json", parallel(jsonFonts));
     watch("./src/_data/styling/colors/colors.json", parallel(jsonColorCss));
     watch("./src/_data/styling/sizing/sizing.json", parallel(jsonSizingCss));
+    watch("./src/_data/styling/sizing/breakpoints.json", parallel(jsonBreakpointsCss));
     watch("./src/_data/styling/typography/*.json", parallel(jsonTypographyCss));
     watch("./src/static/js/*.js", parallel(jsTask));
 }
 
 exports.build = series(otfToTtf, ttfToWoff,fontsTofont,
     fontsStyles,
-    jsonColorCss, jsonSizingCss, jsonTypographyCss, fontsTask,jsTask, cssTask);
+    jsonColorCss, jsonSizingCss,jsonBreakpointsCss, jsonTypographyCss, fontsTask,jsTask, cssTask);
 
 exports.default = series(otfToTtf, ttfToWoff,fontsTofont,
     fontsStyles,
-    jsonColorCss, jsonSizingCss, jsonTypographyCss, parallel( fontsTask, jsTask,cssTask, watchFiles));
+    jsonColorCss, jsonSizingCss,jsonBreakpointsCss, jsonTypographyCss, parallel( fontsTask, jsTask,cssTask, watchFiles));

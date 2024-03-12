@@ -2,9 +2,13 @@
 	background-color: $warning;
 	padding: 50px;
 	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.4);
+	@media (max-width: px($smallBreakpoint)) {
+		padding: 10px;
+	}
 	&__text{
 		color: $body;
 		text-align: center;
+
 		>*{
 			color: $white;
 		}
@@ -12,6 +16,11 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 100px;
+		@media (max-width: px($mediumBreakpoint)) {
+			flex-direction: column;
+			gap: 10px;
+		}
+
 		&:has(a){
 			width: 100%;
 			justify-content: space-between;
@@ -39,6 +48,12 @@
 		}
 		p:has(a){
 			width: 20%;
+			@media (max-width: px($mediumBreakpoint)) {
+				width: 50%;
+			}
+			@media (max-width: px($smallBreakpoint)) {
+				width: 75%;
+			}
 		}
 	}
 }

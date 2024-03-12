@@ -32,6 +32,9 @@
 		}
 		width: per($sidebarWidth);
 		text-align: center;
+		@media (max-width: px($mediumBreakpoint)) {
+			width: per(#{$sidebarWidth * 2});
+		}
 	}
 	&-audio{
 		margin-top: 50px;

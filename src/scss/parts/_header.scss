@@ -16,6 +16,15 @@
 			display: block;
 			width: 100%;
 		}
+		@media (max-width: px($mediumBreakpoint)) {
+			width: 30%;
+		}
+		@media (max-width: px($smallBreakpoint)) {
+			width: 40%;
+		}
+		@media (max-width: px($smallerBreakpoint)) {
+			width: 50%;
+		}
 	}
 
 	.social-container {
@@ -29,7 +38,8 @@
 
 			li {
 				a {
-					display: block;
+					display: flex;
+					align-items: center;
 
 					i {
 						font-size: 25px;
@@ -52,7 +62,9 @@
 		ul.main-menu {
 			display: flex;
 			gap: 10px;
-
+@media (max-width: px($mediumBreakpoint)) {
+display: none;
+}
 			li {
 				display: flex;
 			}

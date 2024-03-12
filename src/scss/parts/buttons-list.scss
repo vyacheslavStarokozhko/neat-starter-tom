@@ -1,10 +1,14 @@
 .cta {
 	padding: 24px;
 	background-color: $black;
-
+@media (max-width: px($smallBreakpoint)) {
+	padding: 16px 0px;
+}
 	&__title {
-		//text-align: center;
-
+		//
+		@media (max-width: px($smallBreakpoint)) {
+			text-align: center;
+		}
 		h2 {
 			color: $white;
 		}
@@ -12,6 +16,9 @@
 
 	ul {
 		margin-top: 20px;
+		@media (max-width: px($mediumBreakpoint)) {
+			flex-wrap: wrap;
+		}
 	}
 
 	.page-cta {
