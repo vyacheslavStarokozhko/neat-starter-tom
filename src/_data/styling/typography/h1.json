@@ -3,5 +3,7 @@
   "h1_font": "\"sofia\"",
   "h1_weight": 500,
   "h1_height": "1.4",
-  "h1_color": "#0a0a0a"
+  "h1_color": "#0a0a0a",
+  "h1_medium_size": 32,
+  "h1_small_size": 30
 }
