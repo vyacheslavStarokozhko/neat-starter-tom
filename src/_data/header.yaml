@@ -15,7 +15,7 @@ header_links:
       - label: My Story
         url: /my-story/
       - label: My Book
-        url: /you-are-the-logo/
+        url: /executive-coach/
         third_links:
           - url: /executive-coach/
             label: Executive Coach
