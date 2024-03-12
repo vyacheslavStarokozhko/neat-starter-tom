@@ -30,13 +30,13 @@ collections:
             fields:
               - { label: Label, name: font_label, widget: string }
               - { label: Style, name: font_style, widget: select,
-                                                    multiple: false,
-                                                    create: false,
-                                                    options: [ "normal", "italic" ] }
+                  multiple: false,
+                  create: false,
+                  options: [ "normal", "italic" ] }
               - { label: Weight, name: font_weight, widget: select,
-                                                      multiple: false,
-                                                      create: false,
-                                                      options: [ "100", "200", "300", "400", "500", "600", "700", "800", "900" ] }
+                  multiple: false,
+                  create: false,
+                  options: [ "100", "200", "300", "400", "500", "600", "700", "800", "900" ] }
               - { label: Font, name: font_url, widget: file }
   - label: "Site Settings"
     name: "site_settings"
@@ -50,6 +50,11 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+      - label: "Site Identity"
+        name: "site_identity"
+        file: "src/_data/site_identity.yaml"
+        fields:
+          - {label: "Fav Icon", name: "icon", widget: file}
   - label: "Colors"
     name: "colors"
     editor:
@@ -88,11 +93,11 @@ collections:
         name: "body_text"
         file: "src/_data/styling/typography/body.json"
         fields:
-          - { label: "Font Size",name: "body_size", widget: number, default: 16}
-          - { label: "Font Family",name: "body_font", widget: string, default: "Open Sans,sans-serif"}
-          - { label: "Font Weight",name: "body_weight", widget: number, default: 400}
-          - { label: "Line Height",name: "body_height", widget: string, default: "1.2"}
-          - { label: Body, name: body, widget: color , default: "#000"}
+          - { label: "Font Size",name: "body_size", widget: number, default: 16 }
+          - { label: "Font Family",name: "body_font", widget: string, default: "Open Sans,sans-serif" }
+          - { label: "Font Weight",name: "body_weight", widget: number, default: 400 }
+          - { label: "Line Height",name: "body_height", widget: string, default: "1.2" }
+          - { label: Body, name: body, widget: color , default: "#000" }
       - label: "Link"
         name: "link"
         file: "src/_data/styling/typography/link.json"
@@ -107,14 +112,14 @@ collections:
         name: "button"
         file: "src/_data/styling/typography/button.json"
         fields:
-          - { label: "Font Size",name: "button_size", widget: number, default: 16}
-          - { label: "Font Family",name: "button_font", widget: string, default: "Open Sans,sans-serif"}
+          - { label: "Font Size",name: "button_size", widget: number, default: 16 }
+          - { label: "Font Family",name: "button_font", widget: string, default: "Open Sans,sans-serif" }
           - { label: "Font Weight",name: "button_weight", widget: number, default: 400 }
-          - { label: "Line Height",name: "button_height", widget: string, default: "1.2"}
-          - { label: Button, name: button, widget: color , default: "#000"}
-          - { label: Link Hover, name: buttonHover, widget: color , default: "#000"}
-          - { label: Background, name: background, widget: color ,  default: "#000"}
-          - { label: Background Hover, name: backgroundHover, widget: color , default: "#000"}
+          - { label: "Line Height",name: "button_height", widget: string, default: "1.2" }
+          - { label: Button, name: button, widget: color , default: "#000" }
+          - { label: Link Hover, name: buttonHover, widget: color , default: "#000" }
+          - { label: Background, name: background, widget: color ,  default: "#000" }
+          - { label: Background Hover, name: backgroundHover, widget: color , default: "#000" }
       - label: "h1"
         name: "h1"
         file: "src/_data/styling/typography/h1.json"
@@ -159,7 +164,7 @@ collections:
           - { label: "Font Family",name: "h5_font", widget: string, default: "Open Sans,sans-serif" }
           - { label: "Font Weight",name: "h5_weight", widget: number, default: 700 }
           - { label: "Line Height",name: "h5_height", widget: string, default: "1.2" }
-          - { label: "Color", name: "h5_color", widget: color , default: "#000"  }
+          - { label: "Color", name: "h5_color", widget: color , default: "#000" }
       - label: "h6"
         name: "h6"
         file: "src/_data/styling/typography/h6.json"
@@ -168,7 +173,7 @@ collections:
           - { label: "Font Family",name: "h6_font", widget: string, default: "Open Sans,sans-serif" }
           - { label: "Font Weight",name: "h6_weight", widget: number, default: 700 }
           - { label: "Line Height",name: "h6_height", widget: string, default: "1.2" }
-          - { label: "Color", name: "h6_color", widget: color , default: "#000"  }
+          - { label: "Color", name: "h6_color", widget: color , default: "#000" }
   - label: "Forms"
     name: "forms"
     editor:
@@ -178,26 +183,46 @@ collections:
         name: "quick_update"
         file: "src/_data/quick_update.yaml"
         fields:
-          - {label: "caption", name: "caption", widget: "markdown",required: false }
+          - { label: "caption", name: "caption", widget: "markdown",required: false }
           - { label: Form Logo, name: form_logo, widget: image }
           - { label: Form Url, name: form_url, widget: string }
+          - { label: Type, name: form_type, required: false, widget: select,
+              multiple: false,
+              create: false,
+              options: [ "default", "custom", "formspark" ], default: "default" }
+          - { label: Form Data, name: form_data, widget: string }
       - label: "Contact Us"
         name: "contact_us"
         file: "src/_data/contact_us.yaml"
         fields:
           - { label: "caption", name: "caption", widget: "markdown",required: false }
+          - { label: Type, name: form_type, required: false, widget: select,
+              multiple: false,
+              create: false,
+              options: [ "default", "custom", "formspark" ], default: "default" }
+          - { label: Form Data, name: form_data, widget: string }
       - label: "Subscribe Today"
         name: "subscribe_today"
         file: "src/_data/subscribe_today.yaml"
         fields:
           - { label: "Caption", name: "caption", widget: "markdown",required: false }
           - { label: "Sub Caption",name: "sub_caption", widget: "string", required: false }
+          - { label: Type, name: form_type, required: false, widget: select,
+              multiple: false,
+              create: false,
+              options: [ "default", "custom", "formspark" ], default: "default" }
+          - { label: Form Data, name: form_data, widget: string }
       - label: "Subscribe Advisory"
         name: "subscribe_advisory"
         file: "src/_data/subscribe_advisory.yaml"
         fields:
           - { label: "Caption", name: "caption", widget: "markdown",required: false }
           - { label: "Sub Caption",name: "sub_caption", widget: "string", required: false }
+          - { label: Type, name: form_type, required: false, widget: select,
+              multiple: false,
+              create: false,
+              options: [ "default", "custom", "formspark" ], default: "default" }
+          - { label: Form Data, name: form_data, widget: string }
   - label: "Pages"
     name: "pages"
     folder: "src/pages"
@@ -205,15 +230,15 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: string}
-      - { label: "Permalink", name: "permalink", widget: string}
+      - { label: "Title", name: "title", widget: string }
+      - { label: "Permalink", name: "permalink", widget: string }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Caption", name: "caption", widget: "markdown" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Body", name: "page_body", widget: "markdown" }
-      - { label: "Bottom", name: "bottom", widget: "markdown" ,required: false}
-      - {label: "Tabs Label", name: "tabs_label",widget: string  ,required: false}
+      - { label: "Bottom", name: "bottom", widget: "markdown" ,required: false }
+      - { label: "Tabs Label", name: "tabs_label",widget: string  ,required: false }
       - label: Tabs
         name: tabs
         widget: list
@@ -236,7 +261,7 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "podcast_body", widget: "markdown" }
-      - { label: "Audio", name: "audio", widget: "file"}
+      - { label: "Audio", name: "audio", widget: "file" }
       - label: Category
         name: podcast_category
         widget: select
@@ -401,4 +426,4 @@ collections:
             widget: select
             multiple: false
             create: false
-            options: [ "Quick Update", "Subscribe Today"]
+            options: [ "Quick Update", "Subscribe Today" ]

@@ -17,6 +17,21 @@
 
         });
 
+        $('.script').each(function () {
+
+            let text = $(this).text();
+            let _text = text.replace('<p>','').replace('</p>','').replaceAll('&quot;','"').replaceAll('&gt;','>').replaceAll('&lt;','<')
+
+            // let html = $(this).html(_text);
+            let html = $.parseHTML(_text);
+            console.log(html);
+
+
+            $(this).text(decodeURI(html));
+            $(this).find('>*:first-child').unwrap();
+
+        });
+
         function InitAccordion() {
             $('.accordion-labels li:first-child .accordion-button,.accordion-contents .accordion-content:first-child').addClass('is-active');
             $('.accordion-button').click(Accordion);
