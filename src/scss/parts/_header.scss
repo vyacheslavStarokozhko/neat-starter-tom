@@ -63,7 +63,7 @@
 			display: flex;
 			gap: 10px;
 @media (max-width: px($mediumBreakpoint)) {
-display: none;
+//display: none;
 }
 			li {
 				display: flex;
@@ -74,6 +74,7 @@ display: none;
 
 				&.is-active {
 					> a {
+						pointer-events: all !important;
 						background-color: $black;
 
 						span {
@@ -114,6 +115,7 @@ display: none;
 
 				li {
 					a {
+
 						width: 100%;
 						font-size: 14px;
 						padding: 10px;
@@ -124,6 +126,12 @@ display: none;
 
 				&.is-active {
 					display: block;
+					li.has-submenu{
+						>	a{
+							pointer-events: none;
+						}
+
+					}
 				}
 
 				&.third, &.fourth {
@@ -174,6 +182,7 @@ display: none;
 			}
 
 			span.text {
+				pointer-events: none;
 				position: relative;
 				transition: 0.3s;
 				padding-right: 38px;
@@ -182,6 +191,7 @@ display: none;
 			}
 
 			a {
+
 				&:hover {
 					background-color: $black;
 
@@ -193,6 +203,12 @@ display: none;
 						}
 					}
 				}
+			}
+
+
+
+			&.mobile-menu{
+				opacity: 0.5;
 			}
 		}
 	}
