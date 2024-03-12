@@ -1,5 +1,6 @@
 {
   "globalWidth": 1200,
   "containerPadding": 16,
-  "sidebarWidth": 33
+  "sidebarWidth": 33,
+  "paragraphSpacing": 16
 }
