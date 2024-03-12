@@ -6,6 +6,7 @@
   "success": "#0F8B8D",
   "danger": "#FF220C",
   "globalWidth": 1079,
+  "accent": "#e6af2e",
   "text": "#0a0a0a",
   "info": "#E6AF2E",
   "containerPadding": 16,
