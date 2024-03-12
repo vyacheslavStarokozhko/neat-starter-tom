@@ -66,7 +66,6 @@ collections:
         fields:
           - { label: Container Background, name: containerColor, widget: color , required: false }
           - { label: Primary, name: primary, widget: color , required: false }
-          - { label: Secondary, name: Secondary, widget: color , required: false }
           - { label: Accent, name: accent, widget: color , required: false }
           - { label: Success, name: success, widget: color , required: false }
           - { label: Warning, name: warning, widget: color , required: false }
@@ -84,6 +83,7 @@ collections:
         fields:
           - { label: Container Width, name: globalWidth, widget: number }
           - { label: Container padding, name: containerPadding, widget: number }
+          - { label: Sidebar Width, name: sidebarWidth, widget: number , hint: "in %"}
   - label: "Typography"
     name: "typography"
     editor:

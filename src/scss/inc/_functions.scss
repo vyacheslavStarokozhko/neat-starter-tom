@@ -2,3 +2,8 @@
 	$px-values: #{$values}px;
 	@return $px-values;
 }
+@function per($values) {
+	$px-values: #{$values}#{"%"};
+	@return $px-values;
+}
+
