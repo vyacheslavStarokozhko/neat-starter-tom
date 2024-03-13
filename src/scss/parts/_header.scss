@@ -7,6 +7,9 @@
 		position: sticky;
 		top: 0;
 		left: 0;
+		@media (max-width: px($mediumBreakpoint)) {
+			position: static;
+		}
 	}
 
 	.logo-container {
