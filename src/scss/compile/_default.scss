@@ -40,6 +40,7 @@
 	}
 	&__image{
 		display: flex;
+		display: none;
 		@media (max-width: px($mediumBreakpoint)) {
 			width: 100%;
 
