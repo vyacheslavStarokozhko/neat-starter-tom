@@ -43,5 +43,12 @@ header_links:
         url: /speaking/
   - label: Contact Me
     url: /contact-tom/
+    second_links:
+      - url: /speaking/
+        label: Speaking
+        third_links: []
+      - label: Speaking
+        url: /speaking/
+        third_links: []
   - label: Podcasts
     url: /podcast/
