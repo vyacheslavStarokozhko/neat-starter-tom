@@ -39,9 +39,10 @@
 		}
 	}
 	&__image{
+		display: flex;
 		@media (max-width: px($mediumBreakpoint)) {
 			width: 100%;
-			display: flex;
+
 			img{
 				width: 100%;
 

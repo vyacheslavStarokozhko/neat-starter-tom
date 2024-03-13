@@ -16,6 +16,7 @@
 			display: block;
 			width: 100%;
 		}
+
 		@media (max-width: px($mediumBreakpoint)) {
 			width: 30%;
 		}
@@ -59,12 +60,15 @@
 	.menu-container {
 		width: 63%;
 
+
+
 		ul.main-menu {
 			display: flex;
 			gap: 10px;
-@media (max-width: px($mediumBreakpoint)) {
-//display: none;
-}
+			@media (max-width: px($mediumBreakpoint)) {
+				//display: none;
+			}
+
 			li {
 				display: flex;
 			}
@@ -126,8 +130,9 @@
 
 				&.is-active {
 					display: block;
-					li.has-submenu{
-						>	a{
+
+					li.has-submenu {
+						> a {
 							pointer-events: none;
 						}
 
@@ -192,7 +197,7 @@
 
 			a {
 
-				&:hover {
+				&.current-page,&:hover {
 					background-color: $black;
 
 					span {
@@ -204,12 +209,97 @@
 					}
 				}
 			}
-
-
-
 			&.mobile-menu{
-				opacity: 0.5;
+//opacity: 0;
+//				height: 0;
+				display: flex;
+				width: 75%;
+				margin: 20px auto;
+				gap: 0;
+				flex-direction: column;
+				.menu-link{
+					width: 100%;
+				}
+				li{
+					flex-direction: column;
+					a{
+						pointer-events: all!important;
+					}
+				}
+				.submenu{
+					position: static;
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					&.is-active{
+
+					}
+					&.third,&.fourth,&.second{
+						border-style: solid;
+						border-top-width: .5px;
+						border-bottom-width: .5px;
+						border-left-width: .5px;
+						border-right-width: .5px;
+						border-color: rgb(74, 125, 190);
+					}
+					&.third,&.fourth{
+						padding: 10px;
+					}
+				}
 			}
+		}
+		.menu-icon {
+			display: none;
+			margin: 0 auto;
+			@media (max-width: px($mediumBreakpoint)) {
+				display: block;
+			}
+			width: 24px;
+			position: relative;
+			border-radius: 0;
+			background-color: transparent;
+			border: none;
+			//padding: 0;
+			height: 36px;
+			span {
+				position: absolute;
+				display: block;
+				background-color: $white;
+				width: inherit;
+				height: 3px;
+				transition: 0.3s;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				top: 50%;
+
+				&:after, &:before {
+					transition: 0.3s;
+					content: '';
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 100%;
+					height: 100%;
+					background-color: $white;
+
+				}
+
+				&:before {
+					top: 9px;
+				}
+
+				&:after {
+					bottom: 9px;
+				}
+			}
+			&.is-active{
+				background-color: $accent;
+				padding: 12px 18px;
+			}
+		}
+		.menu-icon.is-active + ul.main-menu.mobile-menu{
+//opacity: 1;
+//			height: auto;
 		}
 	}
 }
