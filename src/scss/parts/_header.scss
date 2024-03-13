@@ -215,6 +215,7 @@
 			&.mobile-menu{
 opacity: 0;
 				height: 0;
+				position: absolute;
 				display: flex;
 				width: 75%;
 				margin: 20px auto;
@@ -303,6 +304,7 @@ opacity: 0;
 		.menu-icon.is-active + ul.main-menu.mobile-menu{
 opacity: 1;
 			height: auto;
+			position: static;
 		}
 	}
 }
