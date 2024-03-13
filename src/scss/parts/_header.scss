@@ -213,8 +213,8 @@
 				}
 			}
 			&.mobile-menu{
-//opacity: 0;
-//				height: 0;
+opacity: 0;
+				height: 0;
 				display: flex;
 				width: 75%;
 				margin: 20px auto;
@@ -301,8 +301,8 @@
 			}
 		}
 		.menu-icon.is-active + ul.main-menu.mobile-menu{
-//opacity: 1;
-//			height: auto;
+opacity: 1;
+			height: auto;
 		}
 	}
 }
